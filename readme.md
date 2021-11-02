@@ -1,10 +1,10 @@
 # Results
 
-![](first/plots/2_numprocs_benchmark_plot.png)
-![](first/plots/32_numprocs_benchmark_plot.png)
-![](first/plots/8192_N_benchmark_plot.png)
-![](first/plots/all_benchmark_plot.png)
-![](first/plots/comparison_benchmark_plot.png)
+![](02_different_hosts/plots/2_numprocs_benchmark_plot.png)
+![](02_different_hosts/plots/32_numprocs_benchmark_plot.png)
+![](02_different_hosts/plots/8192_N_benchmark_plot.png)
+![](02_different_hosts/plots/all_benchmark_plot.png)
+![](02_different_hosts/plots/comparison_benchmark_plot.png)
 
 # What is this folder
 
