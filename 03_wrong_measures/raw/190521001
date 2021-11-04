@@ -1,0 +1,57 @@
+Sender: LSF System <lsfadmin@eu-ms-004-35>
+Subject: Job 190521001: <mpirun -np 4 code/build_output/main -n 8192 -m 8192 -i allgather-async> in cluster <euler> Done
+
+Job <mpirun -np 4 code/build_output/main -n 8192 -m 8192 -i allgather-async> was submitted from host <eu-login-20> by user <stephael> in cluster <euler> at Tue Nov  2 23:52:40 2021
+Job was executed on host(s) <1*eu-ms-004-35>, in queue <normal.4h>, as user <stephael> in cluster <euler> at Wed Nov  3 06:28:12 2021
+                            <1*eu-ms-004-42>
+                            <1*eu-ms-007-15>
+                            <1*eu-ms-007-30>
+</cluster/home/stephael> was used as the home directory.
+</cluster/home/stephael/dphpc> was used as the working directory.
+Started at Wed Nov  3 06:28:12 2021
+Terminated at Wed Nov  3 06:28:15 2021
+Results reported at Wed Nov  3 06:28:15 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun -np 4 code/build_output/main -n 8192 -m 8192 -i allgather-async
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5.03 sec.
+    Max Memory :                                 1918 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               2178.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   27 sec.
+    Turnaround time :                            23735 sec.
+
+The output (if any) follows:
+
+{"M":8192,"N":8192,"name":"allgather-async","numprocs":4,"runtime":751132,"runtime_compute":567860,"runtime_mpi":183272,"runtimes":[659850,641563,751132,639034],"runtimes_compute":[656727,628274,567860,622456],"runtimes_mpi":[3123,13289,183272,16578],"timestamp":"2021-11-03T06:28:14Z+0100"}
+[1635917295.605034] [eu-ms-007-15:18456:0]          mpool.c:43   UCX  WARN  object 0x176a5c0 was not returned to mpool ucp_requests
+[1635917295.605051] [eu-ms-007-15:18456:0]          mpool.c:43   UCX  WARN  object 0x176a940 was not returned to mpool ucp_requests
+[1635917295.605055] [eu-ms-007-15:18456:0]          mpool.c:43   UCX  WARN  object 0x176acc0 was not returned to mpool ucp_requests
+[1635917295.606224] [eu-ms-004-35:21959:0]          mpool.c:43   UCX  WARN  object 0x2322580 was not returned to mpool ucp_requests
+[1635917295.606237] [eu-ms-004-35:21959:0]          mpool.c:43   UCX  WARN  object 0x2322900 was not returned to mpool ucp_requests
+[1635917295.606241] [eu-ms-004-35:21959:0]          mpool.c:43   UCX  WARN  object 0x2322c80 was not returned to mpool ucp_requests
+[1635917295.606675] [eu-ms-004-42:25984:0]          mpool.c:43   UCX  WARN  object 0x20705c0 was not returned to mpool ucp_requests
+[1635917295.606700] [eu-ms-004-42:25984:0]          mpool.c:43   UCX  WARN  object 0x2070940 was not returned to mpool ucp_requests
+[1635917295.606707] [eu-ms-004-42:25984:0]          mpool.c:43   UCX  WARN  object 0x2070cc0 was not returned to mpool ucp_requests
+[1635917295.608783] [eu-ms-007-30:14373:0]          mpool.c:43   UCX  WARN  object 0xab55c0 was not returned to mpool ucp_requests
+[1635917295.608799] [eu-ms-007-30:14373:0]          mpool.c:43   UCX  WARN  object 0xab5940 was not returned to mpool ucp_requests
+[1635917295.608803] [eu-ms-007-30:14373:0]          mpool.c:43   UCX  WARN  object 0xab5cc0 was not returned to mpool ucp_requests
+
+
+PS:
+
+Read file <results/tmp/raw/190521001.err> for stderr output of this job.
+
