@@ -1,0 +1,41 @@
+0: Starting numprocs=16 N=64, M=64 impl=allgather-async
+5: Starting numprocs=16 N=64, M=64 impl=allgather-async
+8: Starting numprocs=16 N=64, M=64 impl=allgather-async
+14: Starting numprocs=16 N=64, M=64 impl=allgather-async
+3: Starting numprocs=16 N=64, M=64 impl=allgather-async
+7: Starting numprocs=16 N=64, M=64 impl=allgather-async
+12: Starting numprocs=16 N=64, M=64 impl=allgather-async
+2: Starting numprocs=16 N=64, M=64 impl=allgather-async
+11: Starting numprocs=16 N=64, M=64 impl=allgather-async
+15: Starting numprocs=16 N=64, M=64 impl=allgather-async
+6: Starting numprocs=16 N=64, M=64 impl=allgather-async
+13: Starting numprocs=16 N=64, M=64 impl=allgather-async
+4: Starting numprocs=16 N=64, M=64 impl=allgather-async
+9: Starting numprocs=16 N=64, M=64 impl=allgather-async
+1: Starting numprocs=16 N=64, M=64 impl=allgather-async
+10: Starting numprocs=16 N=64, M=64 impl=allgather-async
+time: 0.056898s
+Validation turned on
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Result of process 9 differs from result of process 0: error=inf
+[eu-ms-010-29:14262] *** Process received signal ***
+[eu-ms-010-29:14262] Signal: Aborted (6)
+[eu-ms-010-29:14262] Signal code:  (-6)
+[eu-ms-010-29:14262] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2af82e904630]
+[eu-ms-010-29:14262] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2af82eb47387]
+[eu-ms-010-29:14262] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2af82eb48a78]
+[eu-ms-010-29:14262] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0x99133)[0x2af82e09a133]
+[eu-ms-010-29:14262] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4b56)[0x2af82e0a5b56]
+[eu-ms-010-29:14262] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4bc1)[0x2af82e0a5bc1]
+[eu-ms-010-29:14262] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4e14)[0x2af82e0a5e14]
+[eu-ms-010-29:14262] [ 7] code/build_output/main[0x40ae09]
+[eu-ms-010-29:14262] [ 8] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2af82eb33555]
+[eu-ms-010-29:14262] [ 9] code/build_output/main[0x40cc5f]
+[eu-ms-010-29:14262] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node eu-ms-010-29 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

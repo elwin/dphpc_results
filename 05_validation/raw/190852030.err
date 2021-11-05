@@ -1,0 +1,57 @@
+0: Starting numprocs=32 N=16, M=16 impl=allgather-async
+24: Starting numprocs=32 N=16, M=16 impl=allgather-async
+23: Starting numprocs=32 N=16, M=16 impl=allgather-async
+12: Starting numprocs=32 N=16, M=16 impl=allgather-async
+20: Starting numprocs=32 N=16, M=16 impl=allgather-async
+21: Starting numprocs=32 N=16, M=16 impl=allgather-async
+13: Starting numprocs=32 N=16, M=16 impl=allgather-async
+17: Starting numprocs=32 N=16, M=16 impl=allgather-async
+18: Starting numprocs=32 N=16, M=16 impl=allgather-async
+22: Starting numprocs=32 N=16, M=16 impl=allgather-async
+2: Starting numprocs=32 N=16, M=16 impl=allgather-async
+16: Starting numprocs=32 N=16, M=16 impl=allgather-async
+11: Starting numprocs=32 N=16, M=16 impl=allgather-async
+14: Starting numprocs=32 N=16, M=16 impl=allgather-async
+28: Starting numprocs=32 N=16, M=16 impl=allgather-async
+4: Starting numprocs=32 N=16, M=16 impl=allgather-async
+26: Starting numprocs=32 N=16, M=16 impl=allgather-async
+19: Starting numprocs=32 N=16, M=16 impl=allgather-async
+7: Starting numprocs=32 N=16, M=16 impl=allgather-async
+15: Starting numprocs=32 N=16, M=16 impl=allgather-async
+10: Starting numprocs=32 N=16, M=16 impl=allgather-async
+6: Starting numprocs=32 N=16, M=16 impl=allgather-async
+29: Starting numprocs=32 N=16, M=16 impl=allgather-async
+9: Starting numprocs=32 N=16, M=16 impl=allgather-async
+30: Starting numprocs=32 N=16, M=16 impl=allgather-async
+31: Starting numprocs=32 N=16, M=16 impl=allgather-async
+3: Starting numprocs=32 N=16, M=16 impl=allgather-async
+25: Starting numprocs=32 N=16, M=16 impl=allgather-async
+5: Starting numprocs=32 N=16, M=16 impl=allgather-async
+1: Starting numprocs=32 N=16, M=16 impl=allgather-async
+8: Starting numprocs=32 N=16, M=16 impl=allgather-async
+27: Starting numprocs=32 N=16, M=16 impl=allgather-async
+time: 0.104107s
+Validation turned on
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Result of process 25 differs from result of process 0: error=101.146576
+[eu-ms-001-21:31064] *** Process received signal ***
+[eu-ms-001-21:31064] Signal: Aborted (6)
+[eu-ms-001-21:31064] Signal code:  (-6)
+[eu-ms-001-21:31064] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2b231b784630]
+[eu-ms-001-21:31064] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2b231b9c7387]
+[eu-ms-001-21:31064] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2b231b9c8a78]
+[eu-ms-001-21:31064] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0x99133)[0x2b231af1a133]
+[eu-ms-001-21:31064] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4b56)[0x2b231af25b56]
+[eu-ms-001-21:31064] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4bc1)[0x2b231af25bc1]
+[eu-ms-001-21:31064] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4e14)[0x2b231af25e14]
+[eu-ms-001-21:31064] [ 7] code/build_output/main[0x40ae09]
+[eu-ms-001-21:31064] [ 8] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b231b9b3555]
+[eu-ms-001-21:31064] [ 9] code/build_output/main[0x40cc5f]
+[eu-ms-001-21:31064] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node eu-ms-001-21 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

@@ -1,0 +1,33 @@
+0: Starting numprocs=8 N=512, M=512 impl=allgather-async
+6: Starting numprocs=8 N=512, M=512 impl=allgather-async
+7: Starting numprocs=8 N=512, M=512 impl=allgather-async
+3: Starting numprocs=8 N=512, M=512 impl=allgather-async
+5: Starting numprocs=8 N=512, M=512 impl=allgather-async
+2: Starting numprocs=8 N=512, M=512 impl=allgather-async
+4: Starting numprocs=8 N=512, M=512 impl=allgather-async
+1: Starting numprocs=8 N=512, M=512 impl=allgather-async
+time: 0.032119s
+Validation turned on
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Result of process 1 differs from result of process 0: error=772.721179
+[eu-ms-019-11:08348] *** Process received signal ***
+[eu-ms-019-11:08348] Signal: Aborted (6)
+[eu-ms-019-11:08348] Signal code:  (-6)
+[eu-ms-019-11:08348] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2b34257f7630]
+[eu-ms-019-11:08348] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2b3425a3a387]
+[eu-ms-019-11:08348] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2b3425a3ba78]
+[eu-ms-019-11:08348] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0x99133)[0x2b3424f8d133]
+[eu-ms-019-11:08348] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4b56)[0x2b3424f98b56]
+[eu-ms-019-11:08348] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4bc1)[0x2b3424f98bc1]
+[eu-ms-019-11:08348] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4e14)[0x2b3424f98e14]
+[eu-ms-019-11:08348] [ 7] code/build_output/main[0x40ae09]
+[eu-ms-019-11:08348] [ 8] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b3425a26555]
+[eu-ms-019-11:08348] [ 9] code/build_output/main[0x40cc5f]
+[eu-ms-019-11:08348] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node eu-ms-019-11 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

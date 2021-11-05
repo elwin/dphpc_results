@@ -1,0 +1,29 @@
+0: Starting numprocs=4 N=32, M=32 impl=allgather-async
+1: Starting numprocs=4 N=32, M=32 impl=allgather-async
+3: Starting numprocs=4 N=32, M=32 impl=allgather-async
+2: Starting numprocs=4 N=32, M=32 impl=allgather-async
+time: 0.014563s
+Validation turned on
+terminate called after throwing an instance of 'std::runtime_error'
+  what():  Result of process 2 differs from result of process 0: error=6.070987
+[eu-ms-018-34:26435] *** Process received signal ***
+[eu-ms-018-34:26435] Signal: Aborted (6)
+[eu-ms-018-34:26435] Signal code:  (-6)
+[eu-ms-018-34:26435] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2ace974a1630]
+[eu-ms-018-34:26435] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2ace976e4387]
+[eu-ms-018-34:26435] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2ace976e5a78]
+[eu-ms-018-34:26435] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0x99133)[0x2ace96c37133]
+[eu-ms-018-34:26435] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4b56)[0x2ace96c42b56]
+[eu-ms-018-34:26435] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4bc1)[0x2ace96c42bc1]
+[eu-ms-018-34:26435] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6(+0xa4e14)[0x2ace96c42e14]
+[eu-ms-018-34:26435] [ 7] code/build_output/main[0x40ae09]
+[eu-ms-018-34:26435] [ 8] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2ace976d0555]
+[eu-ms-018-34:26435] [ 9] code/build_output/main[0x40cc5f]
+[eu-ms-018-34:26435] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node eu-ms-018-34 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

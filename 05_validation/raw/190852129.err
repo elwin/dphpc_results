@@ -1,0 +1,78 @@
+0: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+15: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+14: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+21: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+26: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+8: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+16: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+10: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+7: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+4: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+12: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+5: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+3: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+2: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+6: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+9: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+19: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+31: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+24: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+13: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+11: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+25: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+18: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+17: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+30: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+28: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+27: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+1: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+29: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+22: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+23: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+20: Starting numprocs=32 N=1024, M=1024 impl=allreduce-butterfly
+time: 0.147564s
+Validation turned on
+[eu-ms-001-20:7569 :0:7569] rc_verbs_iface.c:92   send completion with error: transport retry counter exceeded qpn 0x1912 wrid 0x1 vendor_err 0x81
+==== backtrace (tid:   7569) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b9ed73fd214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x50) [0x2b9ed73f9f50]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369) [0x2b9ed73fe369]
+ 3  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1) [0x2b9ed73fe491]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af) [0x2b9ee553e3af]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5) [0x2b9ee553e9a5]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2b9ed6ef66ca]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_progress+0x17) [0x2b9ed4977497]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(opal_progress+0x2b) [0x2b9ed6a72b5b]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_request_default_wait_all+0xd5) [0x2b9ed482ec45]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(PMPI_Waitall+0x8f) [0x2b9ed487167f]
+11  code/build_output/main() [0x40c665]
+12  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b9ed578f555]
+13  code/build_output/main() [0x40cc5f]
+=================================
+[eu-ms-001-20:07569] *** Process received signal ***
+[eu-ms-001-20:07569] Signal: Aborted (6)
+[eu-ms-001-20:07569] Signal code:  (-6)
+[eu-ms-001-20:07569] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2b9ed5560630]
+[eu-ms-001-20:07569] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2b9ed57a3387]
+[eu-ms-001-20:07569] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2b9ed57a4a78]
+[eu-ms-001-20:07569] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x55)[0x2b9ed73f9f55]
+[eu-ms-001-20:07569] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369)[0x2b9ed73fe369]
+[eu-ms-001-20:07569] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1)[0x2b9ed73fe491]
+[eu-ms-001-20:07569] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af)[0x2b9ee553e3af]
+[eu-ms-001-20:07569] [ 7] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5)[0x2b9ee553e9a5]
+[eu-ms-001-20:07569] [ 8] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a)[0x2b9ed6ef66ca]
+[eu-ms-001-20:07569] [ 9] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_progress+0x17)[0x2b9ed4977497]
+[eu-ms-001-20:07569] [10] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(opal_progress+0x2b)[0x2b9ed6a72b5b]
+[eu-ms-001-20:07569] [11] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_request_default_wait_all+0xd5)[0x2b9ed482ec45]
+[eu-ms-001-20:07569] [12] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(PMPI_Waitall+0x8f)[0x2b9ed487167f]
+[eu-ms-001-20:07569] [13] code/build_output/main[0x40c665]
+[eu-ms-001-20:07569] [14] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b9ed578f555]
+[eu-ms-001-20:07569] [15] code/build_output/main[0x40cc5f]
+[eu-ms-001-20:07569] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node eu-ms-001-20 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
