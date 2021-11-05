@@ -1,0 +1,45 @@
+Sender: LSF System <lsfadmin@eu-ms-008-02>
+Subject: Job 190760025: <mpirun -np 2 code/build_output/main -n 128 -m 128 -i allgather-async> in cluster <euler> Done
+
+Job <mpirun -np 2 code/build_output/main -n 128 -m 128 -i allgather-async> was submitted from host <eu-login-21> by user <stephael> in cluster <euler> at Thu Nov  4 11:42:10 2021
+Job was executed on host(s) <1*eu-ms-008-02>, in queue <normal.4h>, as user <stephael> in cluster <euler> at Thu Nov  4 11:58:08 2021
+                            <1*eu-ms-017-45>
+</cluster/home/stephael> was used as the home directory.
+</cluster/home/stephael/dphpc> was used as the working directory.
+Started at Thu Nov  4 11:58:08 2021
+Terminated at Thu Nov  4 11:58:09 2021
+Results reported at Thu Nov  4 11:58:09 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun -np 2 code/build_output/main -n 128 -m 128 -i allgather-async
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.59 sec.
+    Max Memory :                                 1 MB
+    Average Memory :                             1.00 MB
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               2047.00 MB
+    Max Swap :                                   -
+    Max Processes :                              2
+    Max Threads :                                2
+    Run time :                                   0 sec.
+    Turnaround time :                            959 sec.
+
+The output (if any) follows:
+
+{"M":128,"N":128,"name":"allgather-async","numprocs":2,"runtime":9150,"runtime_compute":101,"runtime_mpi":9049,"runtimes":[6927,9150],"runtimes_compute":[99,101],"runtimes_mpi":[6828,9049],"timestamp":"2021-11-04T11:58:09Z+0100"}
+[1636023489.748317] [eu-ms-017-45:3783 :0]          mpool.c:43   UCX  WARN  object 0x2738ec0 was not returned to mpool ucp_requests
+[1636023489.750474] [eu-ms-008-02:18027:0]          mpool.c:43   UCX  WARN  object 0xa96ac0 was not returned to mpool ucp_requests
+
+
+PS:
+
+Read file <results/tmp/raw/190760025.err> for stderr output of this job.
+
