@@ -1,0 +1,56 @@
+4: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+21: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+5: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+7: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+2: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+6: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+25: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+12: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+0: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+Iteration 0
+3: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+10: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+9: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+1: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+17: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+18: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+14: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+16: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+13: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+15: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+11: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+8: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+24: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+23: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+22: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+19: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+20: Starting numprocs=26 N=8192, M=8192 impl=allgather-async
+[eu-ms-017-22:26762:0:26762] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x163d000)
+==== backtrace (tid:  26762) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b23676b9214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2b23676b93d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2b23676b96e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2b236581c630]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_dt_pack+0x13b) [0x2b23671b570b]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68281) [0x2b23671e1281]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(uct_rc_verbs_ep_am_bcopy+0xd5) [0x2b2375947d35]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68d6b) [0x2b23671e1d6b]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x88fbe) [0x2b2367201fbe]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_wireup_replay_pending_requests+0x5c) [0x2b236720209c]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x84545) [0x2b23671fd545]
+11  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x1e5f1) [0x2b23676ae5f1]
+12  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2b23671b26ca]
+13  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_progress+0x17) [0x2b2364c33497]
+14  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(opal_progress+0x2b) [0x2b2366d2eb5b]
+15  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_mpi_finalize+0x195) [0x2b2364aeba65]
+16  code/build_output/main() [0x40c04c]
+17  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b2365a4b555]
+18  code/build_output/main() [0x40d2ff]
+=================================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 16 with PID 26762 on node eu-ms-017-22 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

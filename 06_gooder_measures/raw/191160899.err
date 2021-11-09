@@ -1,0 +1,34 @@
+3: Starting numprocs=4 N=8192, M=8192 impl=allgather-async
+0: Starting numprocs=4 N=8192, M=8192 impl=allgather-async
+Iteration 0
+2: Starting numprocs=4 N=8192, M=8192 impl=allgather-async
+1: Starting numprocs=4 N=8192, M=8192 impl=allgather-async
+[eu-ms-024-31:27704:0:27704] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x18b3000)
+==== backtrace (tid:  27704) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b423d028214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2b423d0283d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2b423d0286e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2b423b18b630]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_dt_pack+0x13b) [0x2b423cb2470b]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68281) [0x2b423cb50281]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(uct_rc_verbs_ep_am_bcopy+0xd5) [0x2b424313cd35]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68d6b) [0x2b423cb50d6b]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x88fbe) [0x2b423cb70fbe]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_wireup_replay_pending_requests+0x5c) [0x2b423cb7109c]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x84545) [0x2b423cb6c545]
+11  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x1e5f1) [0x2b423d01d5f1]
+12  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2b423cb216ca]
+13  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_progress+0x17) [0x2b423a5a2497]
+14  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(opal_progress+0x2b) [0x2b423c69db5b]
+15  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_mpi_finalize+0x195) [0x2b423a45aa65]
+16  code/build_output/main() [0x40c04c]
+17  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b423b3ba555]
+18  code/build_output/main() [0x40d2ff]
+=================================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 27704 on node eu-ms-024-31 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

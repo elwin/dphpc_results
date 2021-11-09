@@ -1,0 +1,81 @@
+Sender: LSF System <lsfadmin@eu-ms-002-32>
+Subject: Job 191160275: <mpirun -np 8 code/build_output/main -n 16 -m 16 -i allgather-async> in cluster <euler> Done
+
+Job <mpirun -np 8 code/build_output/main -n 16 -m 16 -i allgather-async> was submitted from host <eu-login-44> by user <stephael> in cluster <euler> at Mon Nov  8 21:37:08 2021
+Job was executed on host(s) <1*eu-ms-002-32>, in queue <normal.4h>, as user <stephael> in cluster <euler> at Mon Nov  8 21:38:24 2021
+                            <1*eu-ms-002-03>
+                            <1*eu-ms-008-13>
+                            <1*eu-ms-008-39>
+                            <1*eu-ms-008-11>
+                            <1*eu-ms-012-31>
+                            <1*eu-ms-012-20>
+                            <1*eu-ms-012-08>
+</cluster/home/stephael> was used as the home directory.
+</cluster/home/stephael/dphpc> was used as the working directory.
+Started at Mon Nov  8 21:38:24 2021
+Terminated at Mon Nov  8 21:38:25 2021
+Results reported at Mon Nov  8 21:38:25 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun -np 8 code/build_output/main -n 16 -m 16 -i allgather-async
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2.61 sec.
+    Max Memory :                                 130 MB
+    Average Memory :                             -
+    Total Requested Memory :                     8192.00 MB
+    Delta Memory :                               8062.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   1 sec.
+    Turnaround time :                            77 sec.
+
+The output (if any) follows:
+
+{"M":16,"N":16,"iteration":0,"name":"allgather-async","num_iterations":1,"numprocs":8,"runtime":22342,"runtime_compute":20,"runtime_mpi":22322,"runtimes":[22111,16611,19480,20821,22342,19723,22003,20508],"runtimes_compute":[19,18,23,17,20,18,16,13],"runtimes_mpi":[22092,16593,19457,20804,22322,19705,21987,20495],"timestamp":"2021-11-08T21:38:25Z+0100"}
+[1636403905.825008] [eu-ms-008-39:6657 :0]          mpool.c:43   UCX  WARN  object 0x10a4fc0 was not returned to mpool ucp_requests
+[1636403905.825027] [eu-ms-008-39:6657 :0]          mpool.c:43   UCX  WARN  object 0x10a5340 was not returned to mpool ucp_requests
+[1636403905.825031] [eu-ms-008-39:6657 :0]          mpool.c:43   UCX  WARN  object 0x10a56c0 was not returned to mpool ucp_requests
+[1636403905.825034] [eu-ms-008-39:6657 :0]          mpool.c:43   UCX  WARN  object 0x10a5dc0 was not returned to mpool ucp_requests
+[1636403905.825026] [eu-ms-008-13:8350 :0]          mpool.c:43   UCX  WARN  object 0x1376e80 was not returned to mpool ucp_requests
+[1636403905.825047] [eu-ms-008-13:8350 :0]          mpool.c:43   UCX  WARN  object 0x13773c0 was not returned to mpool ucp_requests
+[1636403905.825051] [eu-ms-008-13:8350 :0]          mpool.c:43   UCX  WARN  object 0x1377740 was not returned to mpool ucp_requests
+[1636403905.825054] [eu-ms-008-13:8350 :0]          mpool.c:43   UCX  WARN  object 0x1377c80 was not returned to mpool ucp_requests
+[1636403905.825370] [eu-ms-002-32:19761:0]          mpool.c:43   UCX  WARN  object 0x2380dc0 was not returned to mpool ucp_requests
+[1636403905.825384] [eu-ms-002-32:19761:0]          mpool.c:43   UCX  WARN  object 0x2381140 was not returned to mpool ucp_requests
+[1636403905.825389] [eu-ms-002-32:19761:0]          mpool.c:43   UCX  WARN  object 0x23814c0 was not returned to mpool ucp_requests
+[1636403905.825392] [eu-ms-002-32:19761:0]          mpool.c:43   UCX  WARN  object 0x2381a00 was not returned to mpool ucp_requests
+[1636403905.825163] [eu-ms-012-20:22541:0]          mpool.c:43   UCX  WARN  object 0x134b080 was not returned to mpool ucp_requests
+[1636403905.825182] [eu-ms-012-20:22541:0]          mpool.c:43   UCX  WARN  object 0x134b5c0 was not returned to mpool ucp_requests
+[1636403905.825185] [eu-ms-012-20:22541:0]          mpool.c:43   UCX  WARN  object 0x134bb00 was not returned to mpool ucp_requests
+[1636403905.825189] [eu-ms-012-20:22541:0]          mpool.c:43   UCX  WARN  object 0x134be80 was not returned to mpool ucp_requests
+[1636403905.824649] [eu-ms-012-31:28871:0]          mpool.c:43   UCX  WARN  object 0x250df00 was not returned to mpool ucp_requests
+[1636403905.824668] [eu-ms-012-31:28871:0]          mpool.c:43   UCX  WARN  object 0x250e440 was not returned to mpool ucp_requests
+[1636403905.824672] [eu-ms-012-31:28871:0]          mpool.c:43   UCX  WARN  object 0x250e7c0 was not returned to mpool ucp_requests
+[1636403905.824675] [eu-ms-012-31:28871:0]          mpool.c:43   UCX  WARN  object 0x250ed00 was not returned to mpool ucp_requests
+[1636403905.825800] [eu-ms-008-11:1842 :0]          mpool.c:43   UCX  WARN  object 0x17e0e00 was not returned to mpool ucp_requests
+[1636403905.825819] [eu-ms-008-11:1842 :0]          mpool.c:43   UCX  WARN  object 0x17e1500 was not returned to mpool ucp_requests
+[1636403905.825823] [eu-ms-008-11:1842 :0]          mpool.c:43   UCX  WARN  object 0x17e1880 was not returned to mpool ucp_requests
+[1636403905.825826] [eu-ms-008-11:1842 :0]          mpool.c:43   UCX  WARN  object 0x17e1c00 was not returned to mpool ucp_requests
+[1636403905.827284] [eu-ms-002-03:32316:0]          mpool.c:43   UCX  WARN  object 0x19cae00 was not returned to mpool ucp_requests
+[1636403905.827305] [eu-ms-002-03:32316:0]          mpool.c:43   UCX  WARN  object 0x19cb180 was not returned to mpool ucp_requests
+[1636403905.827309] [eu-ms-002-03:32316:0]          mpool.c:43   UCX  WARN  object 0x19cb6c0 was not returned to mpool ucp_requests
+[1636403905.827312] [eu-ms-002-03:32316:0]          mpool.c:43   UCX  WARN  object 0x19cbc00 was not returned to mpool ucp_requests
+[1636403905.828585] [eu-ms-012-08:15648:0]          mpool.c:43   UCX  WARN  object 0x1025180 was not returned to mpool ucp_requests
+[1636403905.828603] [eu-ms-012-08:15648:0]          mpool.c:43   UCX  WARN  object 0x10256c0 was not returned to mpool ucp_requests
+[1636403905.828607] [eu-ms-012-08:15648:0]          mpool.c:43   UCX  WARN  object 0x1025a40 was not returned to mpool ucp_requests
+[1636403905.828610] [eu-ms-012-08:15648:0]          mpool.c:43   UCX  WARN  object 0x1025dc0 was not returned to mpool ucp_requests
+
+
+PS:
+
+Read file <results/tmp/raw/191160275.err> for stderr output of this job.
+
