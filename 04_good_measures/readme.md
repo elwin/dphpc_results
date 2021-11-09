@@ -1,8 +1,8 @@
 # Results
 
-![](plots/2_numprocs_benchmark_plot.png)
-![](plots/8_numprocs_benchmark_plot.png)
-![](plots/32_numprocs_benchmark_plot.png)
+![](plots/runtime_2.svg)
+![](plots/runtime_8.svg)
+![](plots/runtime_32.svg)
 ![](plots/8192_N_benchmark_plot.png)
 ![](plots/all_benchmark_plot.png)
 ![](plots/comparison_benchmark_plot.png)
