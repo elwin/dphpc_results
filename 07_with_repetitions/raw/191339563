@@ -1,0 +1,53 @@
+Sender: LSF System <lsfadmin@eu-ms-005-01>
+Subject: Job 191339563: <mpirun -np 4 code/build_output/main -n 128 -m 128 -t 5 -i allgather-async> in cluster <euler> Done
+
+Job <mpirun -np 4 code/build_output/main -n 128 -m 128 -t 5 -i allgather-async> was submitted from host <eu-login-33> by user <stephael> in cluster <euler> at Wed Nov 10 11:40:18 2021
+Job was executed on host(s) <1*eu-ms-005-01>, in queue <normal.4h>, as user <stephael> in cluster <euler> at Wed Nov 10 11:45:02 2021
+                            <1*eu-ms-008-07>
+                            <1*eu-ms-004-06>
+                            <1*eu-ms-004-13>
+</cluster/home/stephael> was used as the home directory.
+</cluster/home/stephael/dphpc> was used as the working directory.
+Started at Wed Nov 10 11:45:02 2021
+Terminated at Wed Nov 10 11:45:04 2021
+Results reported at Wed Nov 10 11:45:04 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+mpirun -np 4 code/build_output/main -n 128 -m 128 -t 5 -i allgather-async
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1.14 sec.
+    Max Memory :                                 131 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               3965.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   24 sec.
+    Turnaround time :                            286 sec.
+
+The output (if any) follows:
+
+{"M":128,"N":128,"iteration":0,"name":"allgather-async","num_iterations":5,"numprocs":4,"runtime":9140,"runtime_compute":164,"runtime_mpi":8976,"runtimes":[9140,7010,8748,7293],"runtimes_compute":[164,176,172,161],"runtimes_mpi":[8976,6834,8576,7132],"timestamp":"2021-11-10T11:45:03Z+0100"}
+{"M":128,"N":128,"iteration":1,"name":"allgather-async","num_iterations":5,"numprocs":4,"runtime":216,"runtime_compute":212,"runtime_mpi":4,"runtimes":[148,151,151,216],"runtimes_compute":[143,148,148,212],"runtimes_mpi":[5,3,3,4],"timestamp":"2021-11-10T11:45:03Z+0100"}
+{"M":128,"N":128,"iteration":2,"name":"allgather-async","num_iterations":5,"numprocs":4,"runtime":183,"runtime_compute":177,"runtime_mpi":6,"runtimes":[145,162,148,183],"runtimes_compute":[142,155,145,177],"runtimes_mpi":[3,7,3,6],"timestamp":"2021-11-10T11:45:03Z+0100"}
+{"M":128,"N":128,"iteration":3,"name":"allgather-async","num_iterations":5,"numprocs":4,"runtime":161,"runtime_compute":158,"runtime_mpi":3,"runtimes":[145,146,147,161],"runtimes_compute":[143,144,144,158],"runtimes_mpi":[2,2,3,3],"timestamp":"2021-11-10T11:45:03Z+0100"}
+{"M":128,"N":128,"iteration":4,"name":"allgather-async","num_iterations":5,"numprocs":4,"runtime":161,"runtime_compute":158,"runtime_mpi":3,"runtimes":[145,147,147,161],"runtimes_compute":[142,144,143,158],"runtimes_mpi":[3,3,4,3],"timestamp":"2021-11-10T11:45:03Z+0100"}
+[1636541103.698076] [eu-ms-005-01:5548 :0]          mpool.c:43   UCX  WARN  object 0x26589c0 was not returned to mpool ucp_requests
+[1636541103.698590] [eu-ms-004-13:30710:0]          mpool.c:43   UCX  WARN  object 0x1d42e40 was not returned to mpool ucp_requests
+[1636541103.698752] [eu-ms-008-07:7418 :0]          mpool.c:43   UCX  WARN  object 0x14c9bc0 was not returned to mpool ucp_requests
+[1636541103.698721] [eu-ms-004-06:27920:0]          mpool.c:43   UCX  WARN  object 0xb3fbc0 was not returned to mpool ucp_requests
+
+
+PS:
+
+Read file <results/tmp/raw/191339563.err> for stderr output of this job.
+

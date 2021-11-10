@@ -1,0 +1,83 @@
+3: Starting numprocs=6 N=8192, M=8192 impl=allgather-async
+2: Starting numprocs=6 N=8192, M=8192 impl=allgather-async
+4: Starting numprocs=6 N=8192, M=8192 impl=allgather-async
+5: Starting numprocs=6 N=8192, M=8192 impl=allgather-async
+0: Starting numprocs=6 N=8192, M=8192 impl=allgather-async
+Iteration 0
+1: Starting numprocs=6 N=8192, M=8192 impl=allgather-async
+[eu-ms-024-35:28012:0:28012] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x11b4000)
+==== backtrace (tid:  28012) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b2749e81214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2b2749e813d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2b2749e816e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2b2747fe4630]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_dt_pack+0x13b) [0x2b274997d70b]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68281) [0x2b27499a9281]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(uct_rc_verbs_ep_am_bcopy+0xd5) [0x2b275802dd35]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68d6b) [0x2b27499a9d6b]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x88fbe) [0x2b27499c9fbe]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_wireup_replay_pending_requests+0x33) [0x2b27499ca073]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x84545) [0x2b27499c5545]
+11  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x1e5f1) [0x2b2749e765f1]
+12  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2b274997a6ca]
+13  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_send+0x106) [0x2b27473fd166]
+14  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(PMPI_Send+0x11b) [0x2b27472ee4ab]
+15  code/build_output/main() [0x40bfc1]
+16  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b2748213555]
+17  code/build_output/main() [0x40d2ff]
+=================================
+[eu-ms-024-18:27422:0:27422] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x26c0000)
+==== backtrace (tid:  27422) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2ab655f83214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2ab655f833d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2ab655f836e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2ab6540e6630]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_dt_pack+0x13b) [0x2ab655a7f70b]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68281) [0x2ab655aab281]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(uct_rc_verbs_ep_am_bcopy+0xd5) [0x2ab664232d35]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68d6b) [0x2ab655aabd6b]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x88fbe) [0x2ab655acbfbe]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_wireup_replay_pending_requests+0x5c) [0x2ab655acc09c]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x84545) [0x2ab655ac7545]
+11  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x1e5f1) [0x2ab655f785f1]
+12  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2ab655a7c6ca]
+13  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_progress+0x17) [0x2ab6534fd497]
+14  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(opal_progress+0x2b) [0x2ab6555f8b5b]
+15  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_request_default_wait+0x105) [0x2ab6533b4785]
+16  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_barrier_intra_bruck+0x96) [0x2ab653421316]
+17  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(MPI_Barrier+0xa8) [0x2ab6533cd108]
+18  code/build_output/main() [0x40bc72]
+19  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ab654315555]
+20  code/build_output/main() [0x40d2ff]
+=================================
+[eu-ms-019-13:16896:0:16896] Caught signal 11 (Segmentation fault: address not mapped to object at address 0xa06000)
+==== backtrace (tid:  16896) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2ae206970214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2ae2069703d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2ae2069706e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2ae204ad3630]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_dt_pack+0x13b) [0x2ae20646c70b]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68281) [0x2ae206498281]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(uct_rc_verbs_ep_am_bcopy+0xd5) [0x2ae20b576d35]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x68d6b) [0x2ae206498d6b]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x88fbe) [0x2ae2064b8fbe]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_wireup_replay_pending_requests+0x5c) [0x2ae2064b909c]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(+0x84545) [0x2ae2064b4545]
+11  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x1e5f1) [0x2ae2069655f1]
+12  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2ae2064696ca]
+13  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_progress+0x17) [0x2ae203eea497]
+14  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(opal_progress+0x2b) [0x2ae205fe5b5b]
+15  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_request_default_wait+0x105) [0x2ae203da1785]
+16  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_barrier_intra_bruck+0x96) [0x2ae203e0e316]
+17  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(MPI_Barrier+0xa8) [0x2ae203dba108]
+18  code/build_output/main() [0x40bc72]
+19  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ae204d02555]
+20  code/build_output/main() [0x40d2ff]
+=================================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 28012 on node eu-ms-024-35 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

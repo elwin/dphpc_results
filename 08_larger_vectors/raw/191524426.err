@@ -1,0 +1,35 @@
+0: Starting numprocs=4 N=16384, M=16384 impl=allreduce
+Iteration 0
+2: Starting numprocs=4 N=16384, M=16384 impl=allreduce
+3: Starting numprocs=4 N=16384, M=16384 impl=allreduce
+1: Starting numprocs=4 N=16384, M=16384 impl=allreduce
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[15030,0],0] on node eu-ms-003-20
+  Remote daemon: [[15030,0],2] on node eu-ms-022-14
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------
+mpirun: abort is already in progress...hit ctrl-c again to forcibly terminate
+
+mpirun: Forwarding signal 18 to job
+[eu-ms-003-20:5416 :0:5416] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x30)
+==== backtrace (tid:   5416) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2ae4caada214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2ae4caada3d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2ae4caada6e4]
+ 3  /lib64/libpthread.so.0(+0xf630) [0x2ae4cb13b630]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(OPAL_MCA_PMIX3X_PMIx_Finalize+0x4e8) [0x2ae4ca25fea8]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(pmix3x_client_finalize+0x39a) [0x2ae4ca1f7fba]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-rte.so.40(+0x6bd64) [0x2ae4c94b4d64]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-rte.so.40(+0x6bdfc) [0x2ae4c94b4dfc]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40(opal_libevent2022_event_base_loop+0x783) [0x2ae4ca1d90f3]
+ 9  mpirun() [0x401a34]
+10  /lib64/libc.so.6(__libc_start_main+0xf5) [0x2ae4cd449555]
+11  mpirun() [0x40180e]
+=================================
+/cluster/shadow/.lsbatch/1636626788.191524426: line 8:  5416 Segmentation fault      (core dumped) mpirun -np 4 code/build_output/main -n 16384 -m 16384 -t 5 -i allreduce
