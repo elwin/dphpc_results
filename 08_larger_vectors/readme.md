@@ -20,3 +20,9 @@
 ![](plots/mem_usage_2.svg)
 ![](plots/mem_usage_8.svg)
 ![](plots/mem_usage_32.svg)
+
+## Variation across repetitions
+
+![](plots/runtime_repetition_2.svg)
+![](plots/runtime_repetition_8.svg)
+![](plots/runtime_repetition_32.svg)
