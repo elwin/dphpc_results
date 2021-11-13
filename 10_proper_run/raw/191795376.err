@@ -1,0 +1,28 @@
+0: Starting numprocs=4 N=64, M=64 impl=rabenseifner-scatter
+Iteration 0
+2: Starting numprocs=4 N=64, M=64 impl=rabenseifner-scatter
+1: Starting numprocs=4 N=64, M=64 impl=rabenseifner-scatter
+3: Starting numprocs=4 N=64, M=64 impl=rabenseifner-scatter
+[eu-ms-024-36:24319:0:24319] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x15f2000)
+==== backtrace (tid:  24319) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b569f62e214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2b569f62e3d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2b569f62e6e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2b569d791630]
+ 4  code/build_output/main() [0x41d057]
+ 5  code/build_output/main() [0x41e661]
+ 6  code/build_output/main() [0x41a198]
+ 7  code/build_output/main() [0x40c3d9]
+ 8  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b569d9c0555]
+ 9  code/build_output/main() [0x40db3f]
+=================================
+[eu-ms-024-29:3432 :0:3432] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x27e2000)
+[eu-ms-005-22:30490:0:30490] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x12c7000)
+*** Error in `code/build_output/main': malloc(): memory corruption (fast): 0x000000000121e920 ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 24319 on node eu-ms-024-36 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

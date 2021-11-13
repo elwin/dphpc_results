@@ -1,0 +1,36 @@
+1: Starting numprocs=2 N=64, M=64 impl=rabenseifner-scatter
+0: Starting numprocs=2 N=64, M=64 impl=rabenseifner-scatter
+Iteration 0
+[eu-ms-016-10:15370:0:15370] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x1371000)
+==== backtrace (tid:  15370) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2addb703f214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2addb703f3d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2addb703f6e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2addb51a2630]
+ 4  code/build_output/main() [0x41d057]
+ 5  code/build_output/main() [0x41e661]
+ 6  code/build_output/main() [0x41a198]
+ 7  code/build_output/main() [0x40c3d9]
+ 8  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2addb53d1555]
+ 9  code/build_output/main() [0x40db3f]
+=================================
+[eu-ms-022-41:1702 :0:1702] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x1842000)
+==== backtrace (tid:   1702) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2add17f13214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2add17f133d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2add17f136e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2add16076630]
+ 4  code/build_output/main() [0x41d057]
+ 5  code/build_output/main() [0x41e661]
+ 6  code/build_output/main() [0x41a198]
+ 7  code/build_output/main() [0x40c3d9]
+ 8  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2add162a5555]
+ 9  code/build_output/main() [0x40db3f]
+=================================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node eu-ms-016-10 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

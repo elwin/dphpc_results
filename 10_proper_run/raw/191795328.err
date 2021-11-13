@@ -1,0 +1,25 @@
+0: Starting numprocs=2 N=32, M=32 impl=rabenseifner-scatter
+Iteration 0
+1: Starting numprocs=2 N=32, M=32 impl=rabenseifner-scatter
+*** Error in `code/build_output/main': double free or corruption (out): 0x0000000001f27d20 ***
+[eu-ms-009-30:20369:0:20369] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x41)
+[eu-ms-009-25:4836 :0:4836] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x2456000)
+==== backtrace (tid:   4836) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2ab59cfa7214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2ab59cfa73d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2ab59cfa76e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2ab59b10a630]
+ 4  code/build_output/main() [0x41d055]
+ 5  code/build_output/main() [0x41e661]
+ 6  code/build_output/main() [0x41a198]
+ 7  code/build_output/main() [0x40c3d9]
+ 8  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ab59b339555]
+ 9  code/build_output/main() [0x40db3f]
+=================================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 4836 on node eu-ms-009-25 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
