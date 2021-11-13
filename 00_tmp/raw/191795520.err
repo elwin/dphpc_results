@@ -1,0 +1,388 @@
+2: Starting numprocs=4 N=1024, M=1024 impl=rabenseifner-scatter
+3: Starting numprocs=4 N=1024, M=1024 impl=rabenseifner-scatter
+0: Starting numprocs=4 N=1024, M=1024 impl=rabenseifner-scatter
+Iteration 0
+1: Starting numprocs=4 N=1024, M=1024 impl=rabenseifner-scatter
+[eu-ms-025-25:18342:0:18342] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x17db000)
+[eu-ms-025-39:23038:0:23038] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x193d000)
+*** Error in `code/build_output/main': free(): corrupted unsorted chunks: 0x0000000000855430 ***
+======= Backtrace: =========
+/usr/lib64/libc.so.6(+0x81329)[0x2b0429ca8329]
+/cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x26577)[0x2b042b8b4577]
+/cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_debug_disable_signal+0x39)[0x2b042b8b6dc9]
+/cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_debug_cleanup+0x5c)[0x2b042b8b6e5c]
+/cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x29405)[0x2b042b8b7405]
+/usr/lib64/libpthread.so.0(+0xf630)[0x2b0429a1a630]
+code/build_output/main[0x41d055]
+code/build_output/main[0x41e661]
+code/build_output/main[0x41a198]
+code/build_output/main[0x40c3d9]
+/usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b0429c49555]
+code/build_output/main[0x40db3f]
+======= Memory map: ========
+00400000-00428000 r-xp 00000000 00:2d 80483747                           /cluster/home/stephael/dphpc/code/build_output/main
+00627000-00628000 r--p 00027000 00:2d 80483747                           /cluster/home/stephael/dphpc/code/build_output/main
+00628000-00629000 rw-p 00028000 00:2d 80483747                           /cluster/home/stephael/dphpc/code/build_output/main
+00629000-0062a000 rw-p 00000000 00:00 0 
+00854000-00ad2000 rw-p 00000000 00:00 0                                  [heap]
+2b042882f000-2b0428851000 r-xp 00000000 00:02 35913                      /usr/lib64/ld-2.17.so
+2b0428851000-2b0428865000 rw-p 00000000 00:00 0 
+2b0428865000-2b0428866000 rw-s 00000000 103:02 268669164                 /scratch/191795520.tmpdir/ompi.eu-ms-006-37.173100/pid.16749/pmix_dstor_ds12_16749/dstore_sm.lock
+2b0428866000-2b0428867000 r--s 00000000 103:02 268669163                 /scratch/191795520.tmpdir/ompi.eu-ms-006-37.173100/pid.16749/pmix_dstor_ds12_16749/initial-pmix_shared-segment-0
+2b0428867000-2b0428868000 rw-s 00000000 103:02 402956086                 /scratch/191795520.tmpdir/ompi.eu-ms-006-37.173100/pid.16749/pmix_dstor_ds21_16749/smlockseg-3750952961
+2b0428868000-2b0428869000 r--s 00000000 103:02 402956085                 /scratch/191795520.tmpdir/ompi.eu-ms-006-37.173100/pid.16749/pmix_dstor_ds21_16749/initial-pmix_shared-segment-0
+2b0428869000-2b042886a000 -w-s 00000000 00:05 135859                     /dev/infiniband/uverbs0
+2b042886a000-2b042886b000 -w-s 00001000 00:05 135859                     /dev/infiniband/uverbs0
+2b042886b000-2b042886c000 r--s 00003000 00:05 135859                     /dev/infiniband/uverbs0
+2b042886c000-2b042886f000 rw-s 00000000 00:10 30248792                   /dev/shm/ucx_shm_posix_5507da55 (deleted)
+2b042886f000-2b0428872000 rw-s 00000000 00:01 53706756                   /SYSV00000000 (deleted)
+2b0428872000-2b0428874000 rw-p 00000000 00:00 0 
+2b0428874000-2b0428876000 rw-p 00000000 00:00 0 
+2b0428876000-2b0428877000 rw-p 00000000 00:00 0 
+2b0428877000-2b0428a23000 rw-p 00000000 00:00 0 
+2b0428a23000-2b0428a4b000 rw-p 00000000 00:00 0 
+2b0428a4b000-2b0428a4c000 rw-p 00000000 00:00 0 
+2b0428a50000-2b0428a51000 r--p 00021000 00:02 35913                      /usr/lib64/ld-2.17.so
+2b0428a51000-2b0428a52000 rw-p 00022000 00:02 35913                      /usr/lib64/ld-2.17.so
+2b0428a52000-2b0428a53000 rw-p 00000000 00:00 0 
+2b0428a53000-2b0428a6c000 r-xp 00000000 00:2a 3995932850                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi_cxx.so.40.20.1
+2b0428a6c000-2b0428c6c000 ---p 00019000 00:2a 3995932850                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi_cxx.so.40.20.1
+2b0428c6c000-2b0428c6e000 r--p 00019000 00:2a 3995932850                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi_cxx.so.40.20.1
+2b0428c6e000-2b0428c6f000 rw-p 0001b000 00:2a 3995932850                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi_cxx.so.40.20.1
+2b0428c6f000-2b0428ed9000 r-xp 00000000 00:2a 3995932845                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40.20.2
+2b0428ed9000-2b04290d9000 ---p 0026a000 00:2a 3995932845                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40.20.2
+2b04290d9000-2b04290dc000 r--p 0026a000 00:2a 3995932845                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40.20.2
+2b04290dc000-2b0429100000 rw-p 0026d000 00:2a 3995932845                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40.20.2
+2b0429100000-2b0429117000 rw-p 00000000 00:00 0 
+2b0429117000-2b04292e0000 r-xp 00000000 00:2a 3996657418                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6.0.28
+2b04292e0000-2b04294e0000 ---p 001c9000 00:2a 3996657418                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6.0.28
+2b04294e0000-2b04294eb000 r--p 001c9000 00:2a 3996657418                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6.0.28
+2b04294eb000-2b04294ee000 rw-p 001d4000 00:2a 3996657418                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libstdc++.so.6.0.28
+2b04294ee000-2b04294f1000 rw-p 00000000 00:00 0 
+2b04294f1000-2b04295f2000 r-xp 00000000 00:02 36202                      /usr/lib64/libm-2.17.so
+2b04295f2000-2b04297f1000 ---p 00101000 00:02 36202                      /usr/lib64/libm-2.17.so
+2b04297f1000-2b04297f2000 r--p 00100000 00:02 36202                      /usr/lib64/libm-2.17.so
+2b04297f2000-2b04297f3000 rw-p 00101000 00:02 36202                      /usr/lib64/libm-2.17.so
+2b04297f3000-2b042980a000 r-xp 00000000 00:2a 3997327093                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libgcc_s.so.1
+2b042980a000-2b0429a09000 ---p 00017000 00:2a 3997327093                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libgcc_s.so.1
+2b0429a09000-2b0429a0a000 r--p 00016000 00:2a 3997327093                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libgcc_s.so.1
+2b0429a0a000-2b0429a0b000 rw-p 00017000 00:2a 3997327093                 /cluster/spack/apps/linux-centos7-x86_64/gcc-4.8.5/gcc-9.3.0-mjmsvu3362usxjr7tas4ywkd2e4ko5x3/lib64/libgcc_s.so.1
+2b0429a0b000-2b0429a22000 r-xp 00000000 00:02 36398                      /usr/lib64/libpthread-2.17.so
+2b0429a22000-2b0429c21000 ---p 00017000 00:02 36398                      /usr/lib64/libpthread-2.17.so
+2b0429c21000-2b0429c22000 r--p 00016000 00:02 36398                      /usr/lib64/libpthread-2.17.so
+2b0429c22000-2b0429c23000 rw-p 00017000 00:02 36398                      /usr/lib64/libpthread-2.17.so
+2b0429c23000-2b0429c27000 rw-p 00000000 00:00 0 
+2b0429c27000-2b0429d1c000 r-xp 00000000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429d1c000-2b0429d1d000 r-xp 000f5000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429d1d000-2b0429d1f000 r-xp 000f6000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429d1f000-2b0429d21000 r-xp 000f8000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429d21000-2b0429d26000 r-xp 000fa000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429d26000-2b0429d28000 r-xp 000ff000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429d28000-2b0429deb000 r-xp 00101000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429deb000-2b0429fea000 ---p 001c4000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429fea000-2b0429fee000 r--p 001c3000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429fee000-2b0429ff0000 rw-p 001c7000 00:02 36186                      /usr/lib64/libc-2.17.so
+2b0429ff0000-2b0429ff5000 rw-p 00000000 00:00 0 
+2b0429ff5000-2b042a01c000 r-xp 00000000 00:02 42855                      /usr/lib64/liblustreapi.so.1.0.0
+2b042a01c000-2b042a21b000 ---p 00027000 00:02 42855                      /usr/lib64/liblustreapi.so.1.0.0
+2b042a21b000-2b042a21c000 r--p 00026000 00:02 42855                      /usr/lib64/liblustreapi.so.1.0.0
+2b042a21c000-2b042a21d000 rw-p 00027000 00:02 42855                      /usr/lib64/liblustreapi.so.1.0.0
+2b042a21d000-2b042a226000 rw-p 00000000 00:00 0 
+2b042a226000-2b042a33a000 r-xp 00000000 00:2a 4000747624                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-rte.so.40.20.2
+2b042a33a000-2b042a53a000 ---p 00114000 00:2a 4000747624                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-rte.so.40.20.2
+2b042a53a000-2b042a53c000 r--p 00114000 00:2a 4000747624                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-rte.so.40.20.2
+2b042a53c000-2b042a547000 rw-p 00116000 00:2a 4000747624                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-rte.so.40.20.2
+2b042a547000-2b042a54a000 rw-p 00000000 00:00 0 
+2b042a54a000-2b042a7be000 r-xp 00000000 00:29 93041737                   /cluster/apps/lsf/10.1/linux2.6-glibc2.3-x86_64/lib/libbat.so
+2b042a7be000-2b042a8be000 ---p 00274000 00:29 93041737                   /cluster/apps/lsf/10.1/linux2.6-glibc2.3-x86_64/lib/libbat.so
+2b042a8be000-2b042a8ea000 rw-p 00274000 00:29 93041737                   /cluster/apps/lsf/10.1/linux2.6-glibc2.3-x86_64/lib/libbat.so
+2b042a8ea000-2b042a926000 rw-p 00000000 00:00 0 
+2b042a926000-2b042aa4d000 r-xp 00000000 00:29 93041739                   /cluster/apps/lsf/10.1/linux2.6-glibc2.3-x86_64/lib/liblsf.so
+2b042aa4d000-2b042ab4c000 ---p 00127000 00:29 93041739                   /cluster/apps/lsf/10.1/linux2.6-glibc2.3-x86_64/lib/liblsf.so
+2b042ab4c000-2b042ab6e000 rw-p 00126000 00:29 93041739                   /cluster/apps/lsf/10.1/linux2.6-glibc2.3-x86_64/lib/liblsf.so
+2b042ab6e000-2b042acb4000 rw-p 00000000 00:00 0 
+2b042acb4000-2b042accb000 r-xp 00000000 00:02 36206                      /usr/lib64/libnsl-2.17.so
+2b042accb000-2b042aeca000 ---p 00017000 00:02 36206                      /usr/lib64/libnsl-2.17.so
+2b042aeca000-2b042aecb000 r--p 00016000 00:02 36206                      /usr/lib64/libnsl-2.17.so
+2b042aecb000-2b042aecc000 rw-p 00017000 00:02 36206                      /usr/lib64/libnsl-2.17.so
+2b042aecc000-2b042aece000 rw-p 00000000 00:00 0 
+2b042aece000-2b042b153000 r-xp 00000000 00:2a 4000747617                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40.20.2
+2b042b153000-2b042b352000 ---p 00285000 00:2a 4000747617                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40.20.2
+2b042b352000-2b042b358000 r--p 00284000 00:2a 4000747617                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40.20.2
+2b042b358000-2b042b36c000 rw-p 0028a000 00:2a 4000747617                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libopen-pal.so.40.20.2
+2b042b36c000-2b042b377000 rw-p 00000000 00:00 0 
+2b042b377000-2b042b444000 r-xp 00000000 00:2a 3996238513                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0.0.0
+2b042b444000-2b042b644000 ---p 000cd000 00:2a 3996238513                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0.0.0
+2b042b644000-2b042b645000 r--p 000cd000 00:2a 3996238513                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0.0.0
+2b042b645000-2b042b648000 rw-p 000ce000 00:2a 3996238513                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0.0.0
+2b042b648000-2b042b649000 rw-p 00000000 00:00 0 
+2b042b649000-2b042b68a000 r-xp 00000000 00:2a 3996238508                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libuct.so.0.0.0
+2b042b68a000-2b042b889000 ---p 00041000 00:2a 3996238508                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libuct.so.0.0.0
+2b042b889000-2b042b88a000 r--p 00040000 00:2a 3996238508                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libuct.so.0.0.0
+2b042b88a000-2b042b88e000 rw-p 00041000 00:2a 3996238508                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libuct.so.0.0.0
+2b042b88e000-2b042b8dd000 r-xp 00000000 00:2a 3996238504                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0.0.0
+2b042b8dd000-2b042badc000 ---p 0004f000 00:2a 3996238504                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0.0.0
+2b042badc000-2b042badd000 r--p 0004e000 00:2a 3996238504                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0.0.0
+2b042badd000-2b042bae0000 rw-p 0004f000 00:2a 3996238504                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0.0.0
+2b042bae0000-2b042bae3000 rw-p 00000000 00:00 0 
+2b042bae3000-2b042baed000 r-xp 00000000 00:2a 3999967111                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/numactl-2.0.14-vtkypqthaucyxsom5ptoscbmnfvxy5am/lib/libnuma.so.1.0.0
+2b042baed000-2b042bcec000 ---p 0000a000 00:2a 3999967111                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/numactl-2.0.14-vtkypqthaucyxsom5ptoscbmnfvxy5am/lib/libnuma.so.1.0.0
+2b042bcec000-2b042bced000 r--p 00009000 00:2a 3999967111                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/numactl-2.0.14-vtkypqthaucyxsom5ptoscbmnfvxy5am/lib/libnuma.so.1.0.0
+2b042bced000-2b042bcee000 rw-p 0000a000 00:2a 3999967111                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/numactl-2.0.14-vtkypqthaucyxsom5ptoscbmnfvxy5am/lib/libnuma.so.1.0.0
+2b042bcee000-2b042bd07000 r-xp 00000000 00:2a 3993038510                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucm.so.0.0.0
+2b042bd07000-2b042bf06000 ---p 00019000 00:2a 3993038510                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucm.so.0.0.0
+2b042bf06000-2b042bf07000 r--p 00018000 00:2a 3993038510                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucm.so.0.0.0
+2b042bf07000-2b042bf08000 rw-p 00019000 00:2a 3993038510                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucm.so.0.0.0
+2b042bf08000-2b042bf09000 rw-p 00000000 00:00 0 
+2b042bf09000-2b042bf21000 r-xp 00000000 00:2a 3994357822                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/librdmacm.so.1.3.32.0
+2b042bf21000-2b042c120000 ---p 00018000 00:2a 3994357822                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/librdmacm.so.1.3.32.0
+2b042c120000-2b042c121000 r--p 00017000 00:2a 3994357822                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/librdmacm.so.1.3.32.0
+2b042c121000-2b042c122000 rw-p 00018000 00:2a 3994357822                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/librdmacm.so.1.3.32.0
+2b042c122000-2b042c123000 rw-p 00000000 00:00 0 
+2b042c123000-2b042c13f000 r-xp 00000000 00:2a 3994357819                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs.so.1.11.32.0
+2b042c13f000-2b042c33f000 ---p 0001c000 00:2a 3994357819                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs.so.1.11.32.0
+2b042c33f000-2b042c340000 r--p 0001c000 00:2a 3994357819                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs.so.1.11.32.0
+2b042c340000-2b042c341000 rw-p 0001d000 00:2a 3994357819                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs.so.1.11.32.0
+2b042c341000-2b042c348000 r-xp 00000000 00:02 36421                      /usr/lib64/librt-2.17.so
+2b042c348000-2b042c547000 ---p 00007000 00:02 36421                      /usr/lib64/librt-2.17.so
+2b042c547000-2b042c548000 r--p 00006000 00:02 36421                      /usr/lib64/librt-2.17.so
+2b042c548000-2b042c549000 rw-p 00007000 00:02 36421                      /usr/lib64/librt-2.17.so
+2b042c549000-2b042c54b000 r-xp 00000000 00:02 35870                      /usr/lib64/libutil-2.17.so
+2b042c54b000-2b042c74a000 ---p 00002000 00:02 35870                      /usr/lib64/libutil-2.17.so
+2b042c74a000-2b042c74b000 r--p 00001000 00:02 35870                      /usr/lib64/libutil-2.17.so
+2b042c74b000-2b042c74c000 rw-p 00002000 00:02 35870                      /usr/lib64/libutil-2.17.so
+2b042c74c000-2b042c7a9000 r-xp 00000000 00:2a 3996931544                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/hwloc-2.5.0-uj4eiecfl4ufb67uq7epk5dziu6esovy/lib/libhwloc.so.15.5.0
+2b042c7a9000-2b042c9a8000 ---p 0005d000 00:2a 3996931544                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/hwloc-2.5.0-uj4eiecfl4ufb67uq7epk5dziu6esovy/lib/libhwloc.so.15.5.0
+2b042c9a8000-2b042c9a9000 r--p 0005c000 00:2a 3996931544                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/hwloc-2.5.0-uj4eiecfl4ufb67uq7epk5dziu6esovy/lib/libhwloc.so.15.5.0
+2b042c9a9000-2b042c9aa000 rw-p 0005d000 00:2a 3996931544                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/hwloc-2.5.0-uj4eiecfl4ufb67uq7epk5dziu6esovy/lib/libhwloc.so.15.5.0
+2b042c9aa000-2b042c9be000 r-xp 00000000 00:02 38007                      /usr/lib64/libudev.so.1.6.2
+2b042c9be000-2b042cbbe000 ---p 00014000 00:02 38007                      /usr/lib64/libudev.so.1.6.2
+2b042cbbe000-2b042cbbf000 r--p 00014000 00:02 38007                      /usr/lib64/libudev.so.1.6.2
+2b042cbbf000-2b042cbc0000 rw-p 00015000 00:02 38007                      /usr/lib64/libudev.so.1.6.2
+2b042cbc0000-2b042cbc8000 r-xp 00000000 00:2a 3996499024                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libpciaccess-0.16-o5633dylvmp4u26taunlkxk7t765qns5/lib/libpciaccess.so.0.11.1
+2b042cbc8000-2b042cdc7000 ---p 00008000 00:2a 3996499024                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libpciaccess-0.16-o5633dylvmp4u26taunlkxk7t765qns5/lib/libpciaccess.so.0.11.1
+2b042cdc7000-2b042cdc8000 r--p 00007000 00:2a 3996499024                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libpciaccess-0.16-o5633dylvmp4u26taunlkxk7t765qns5/lib/libpciaccess.so.0.11.1
+2b042cdc8000-2b042cdc9000 rw-p 00008000 00:2a 3996499024                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libpciaccess-0.16-o5633dylvmp4u26taunlkxk7t765qns5/lib/libpciaccess.so.0.11.1
+2b042cdc9000-2b042ce40000 r-xp 00000000 00:2a 3997352330                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/cuda-10.1.243-w4egrgizjcbscahkw6y7qnvdcfdm7spp/targets/x86_64-linux/lib/libcudart.so.10.1.243
+2b042ce40000-2b042d040000 ---p 00077000 00:2a 3997352330                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/cuda-10.1.243-w4egrgizjcbscahkw6y7qnvdcfdm7spp/targets/x86_64-linux/lib/libcudart.so.10.1.243
+2b042d040000-2b042d044000 rw-p 00077000 00:2a 3997352330                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/cuda-10.1.243-w4egrgizjcbscahkw6y7qnvdcfdm7spp/targets/x86_64-linux/lib/libcudart.so.10.1.243
+2b042d044000-2b042d045000 rw-p 00000000 00:00 0 
+2b042d045000-2b042d19c000 r-xp 00000000 00:2a 3993787004                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libxml2-2.9.10-ubovrs5nbckislsq2kl5nveln5i3oetq/lib/libxml2.so.2.9.10
+2b042d19c000-2b042d39c000 ---p 00157000 00:2a 3993787004                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libxml2-2.9.10-ubovrs5nbckislsq2kl5nveln5i3oetq/lib/libxml2.so.2.9.10
+2b042d39c000-2b042d3a4000 r--p 00157000 00:2a 3993787004                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libxml2-2.9.10-ubovrs5nbckislsq2kl5nveln5i3oetq/lib/libxml2.so.2.9.10
+2b042d3a4000-2b042d3a6000 rw-p 0015f000 00:2a 3993787004                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libxml2-2.9.10-ubovrs5nbckislsq2kl5nveln5i3oetq/lib/libxml2.so.2.9.10
+2b042d3a6000-2b042d3a7000 rw-p 00000000 00:00 0 
+2b042d3a7000-2b042d3a9000 r-xp 00000000 00:02 36198                      /usr/lib64/libdl-2.17.so
+2b042d3a9000-2b042d5a9000 ---p 00002000 00:02 36198                      /usr/lib64/libdl-2.17.so
+2b042d5a9000-2b042d5aa000 r--p 00002000 00:02 36198                      /usr/lib64/libdl-2.17.so
+2b042d5aa000-2b042d5ab000 rw-p 00003000 00:02 36198                      /usr/lib64/libdl-2.17.so
+2b042d5ab000-2b042d5c1000 r-xp 00000000 00:2a 3993560771                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/zlib-1.2.11-robh7cacv225xrz2yrt3yr4sdgndwplr/lib/libz.so.1.2.11
+2b042d5c1000-2b042d7c1000 ---p 00016000 00:2a 3993560771                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/zlib-1.2.11-robh7cacv225xrz2yrt3yr4sdgndwplr/lib/libz.so.1.2.11
+2b042d7c1000-2b042d7c2000 r--p 00016000 00:2a 3993560771                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/zlib-1.2.11-robh7cacv225xrz2yrt3yr4sdgndwplr/lib/libz.so.1.2.11
+2b042d7c2000-2b042d7c3000 rw-p 00017000 00:2a 3993560771                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/zlib-1.2.11-robh7cacv225xrz2yrt3yr4sdgndwplr/lib/libz.so.1.2.11
+2b042d7c3000-2b042d7e8000 r-xp 00000000 00:2a 3994129351                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/xz-5.2.3-jeefzromfmmk5e7xv77hfbzpefbtgkrx/lib/liblzma.so.5.2.3
+2b042d7e8000-2b042d9e7000 ---p 00025000 00:2a 3994129351                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/xz-5.2.3-jeefzromfmmk5e7xv77hfbzpefbtgkrx/lib/liblzma.so.5.2.3
+2b042d9e7000-2b042d9e8000 r--p 00024000 00:2a 3994129351                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/xz-5.2.3-jeefzromfmmk5e7xv77hfbzpefbtgkrx/lib/liblzma.so.5.2.3
+2b042d9e8000-2b042d9e9000 rw-p 00025000 00:2a 3994129351                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/xz-5.2.3-jeefzromfmmk5e7xv77hfbzpefbtgkrx/lib/liblzma.so.5.2.3
+2b042d9e9000-2b042dae3000 r-xp 00000000 00:2a 3994098562                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libiconv-1.16-fxxduxery5kdf6vax2zkn6t6fyn5uojo/lib/libiconv.so.2.6.1
+2b042dae3000-2b042dce3000 ---p 000fa000 00:2a 3994098562                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libiconv-1.16-fxxduxery5kdf6vax2zkn6t6fyn5uojo/lib/libiconv.so.2.6.1
+2b042dce3000-2b042dce5000 r--p 000fa000 00:2a 3994098562                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libiconv-1.16-fxxduxery5kdf6vax2zkn6t6fyn5uojo/lib/libiconv.so.2.6.1
+2b042dce5000-2b042dce6000 rw-p 000fc000 00:2a 3994098562                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libiconv-1.16-fxxduxery5kdf6vax2zkn6t6fyn5uojo/lib/libiconv.so.2.6.1
+2b042dce6000-2b042dd22000 r-xp 00000000 00:02 37408                      /usr/lib64/libreadline.so.6.2
+2b042dd22000-2b042df22000 ---p 0003c000 00:02 37408                      /usr/lib64/libreadline.so.6.2
+2b042df22000-2b042df24000 r--p 0003c000 00:02 37408                      /usr/lib64/libreadline.so.6.2
+2b042df24000-2b042df2a000 rw-p 0003e000 00:02 37408                      /usr/lib64/libreadline.so.6.2
+2b042df2a000-2b042df2c000 rw-p 00000000 00:00 0 
+2b042df2c000-2b042df2f000 r-xp 00000000 00:02 37536                      /usr/lib64/libkeyutils.so.1.5
+2b042df2f000-2b042e12e000 ---p 00003000 00:02 37536                      /usr/lib64/libkeyutils.so.1.5
+2b042e12e000-2b042e12f000 r--p 00002000 00:02 37536                      /usr/lib64/libkeyutils.so.1.5
+2b042e12f000-2b042e130000 rw-p 00003000 00:02 37536                      /usr/lib64/libkeyutils.so.1.5
+2b042e130000-2b042e14e000 r-xp 00000000 00:2a 3999425460                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-3.so.200.25.0
+2b042e14e000-2b042e34e000 ---p 0001e000 00:2a 3999425460                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-3.so.200.25.0
+2b042e34e000-2b042e350000 r--p 0001e000 00:2a 3999425460                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-3.so.200.25.0
+2b042e350000-2b042e351000 rw-p 00020000 00:2a 3999425460                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-3.so.200.25.0
+2b042e351000-2b042e3ba000 r-xp 00000000 00:2a 3999425464                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-route-3.so.200.25.0
+2b042e3ba000-2b042e5b9000 ---p 00069000 00:2a 3999425464                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-route-3.so.200.25.0
+2b042e5b9000-2b042e5bc000 r--p 00068000 00:2a 3999425464                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-route-3.so.200.25.0
+2b042e5bc000-2b042e5c1000 rw-p 0006b000 00:2a 3999425464                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/libnl-3.3.0-qddalm3xaoggjhdueho3o53xinpugzg3/lib/libnl-route-3.so.200.25.0
+2b042e5c1000-2b042e5c3000 rw-p 00000000 00:00 0 
+2b042e5c3000-2b042e5c7000 r-xp 00000000 00:02 37395                      /usr/lib64/libcap.so.2.22
+2b042e5c7000-2b042e7c6000 ---p 00004000 00:02 37395                      /usr/lib64/libcap.so.2.22
+2b042e7c6000-2b042e7c7000 r--p 00003000 00:02 37395                      /usr/lib64/libcap.so.2.22
+2b042e7c7000-2b042e7c8000 rw-p 00004000 00:02 37395                      /usr/lib64/libcap.so.2.22
+2b042e7c8000-2b042e816000 r-xp 00000000 00:02 37702                      /usr/lib64/libdw-0.176.so
+2b042e816000-2b042ea16000 ---p 0004e000 00:02 37702                      /usr/lib64/libdw-0.176.so
+2b042ea16000-2b042ea18000 r--p 0004e000 00:02 37702                      /usr/lib64/libdw-0.176.so
+2b042ea18000-2b042ea19000 rw-p 00050000 00:02 37702                      /usr/lib64/libdw-0.176.so
+2b042ea19000-2b042ea3e000 r-xp 00000000 00:02 36224                      /usr/lib64/libtinfo.so.5.9
+2b042ea3e000-2b042ec3e000 ---p 00025000 00:02 36224                      /usr/lib64/libtinfo.so.5.9
+2b042ec3e000-2b042ec42000 r--p 00025000 00:02 36224                      /usr/lib64/libtinfo.so.5.9
+2b042ec42000-2b042ec43000 rw-p 00029000 00:02 36224                      /usr/lib64/libtinfo.so.5.9
+2b042ec43000-2b042ec47000 r-xp 00000000 00:02 37383                      /usr/lib64/libattr.so.1.1.0
+2b042ec47000-2b042ee46000 ---p 00004000 00:02 37383                      /usr/lib64/libattr.so.1.1.0
+2b042ee46000-2b042ee47000 r--p 00003000 00:02 37383                      /usr/lib64/libattr.so.1.1.0
+2b042ee47000-2b042ee48000 rw-p 00004000 00:02 37383                      /usr/lib64/libattr.so.1.1.0
+2b042ee48000-2b042ee5f000 r-xp 00000000 00:02 36434                      /usr/lib64/libelf-0.176.so
+2b042ee5f000-2b042f05e000 ---p 00017000 00:02 36434                      /usr/lib64/libelf-0.176.so
+2b042f05e000-2b042f05f000 r--p 00016000 00:02 36434                      /usr/lib64/libelf-0.176.so
+2b042f05f000-2b042f060000 rw-p 00017000 00:02 36434                      /usr/lib64/libelf-0.176.so
+2b042f060000-2b042f06f000 r-xp 00000000 00:02 36187                      /usr/lib64/libbz2.so.1.0.6
+2b042f06f000-2b042f26e000 ---p 0000f000 00:02 36187                      /usr/lib64/libbz2.so.1.0.6
+2b042f26e000-2b042f26f000 r--p 0000e000 00:02 36187                      /usr/lib64/libbz2.so.1.0.6
+2b042f26f000-2b042f270000 rw-p 0000f000 00:02 36187                      /usr/lib64/libbz2.so.1.0.6
+2b042f270000-2b042f271000 ---p 00000000 00:00 0 
+2b042f271000-2b042f471000 rw-p 00000000 00:00 0 
+2b042f471000-2b042f472000 ---p 00000000 00:00 0 
+2b042f472000-2b042f672000 rw-p 00000000 00:00 0 
+2b042f672000-2b042fa72000 r--s 00000000 103:02 402956087                 /scratch/191795520.tmpdir/ompi.eu-ms-006-37.173100/pid.16749/pmix_dstor_ds21_16749/smseg-3750952961-0
+2b042fa72000-2b042fe72000 r--s 00000000 103:02 402956088                 /scratch/191795520.tmpdir/ompi.eu-ms-006-37.173100/pid.16749/pmix_dstor_ds21_16749/smdataseg-3750952961-0
+2b042fe72000-2b042fff2000 rw-p 00000000 00:00 0 
+2b0430000000-2b0430021000 rw-p 00000000 00:00 0 
+2b0430021000-2b0434000000 ---p 00000000 00:00 0 
+2b0434000000-2b0434021000 rw-p 00000000 00:00 0 
+2b0434021000-2b0438000000 ---p 00000000 00:00 0 
+2b0438000000-2b0439166000 r-xp 00000000 00:02 43209                      /usr/lib64/libcuda.so.450.80.02
+2b0439166000-2b0439365000 ---p 01166000 00:02 43209                      /usr/lib64/libcuda.so.450.80.02
+2b0439365000-2b0439482000 rw-p 01165000 00:02 43209                      /usr/lib64/libcuda.so.450.80.02
+2b0439482000-2b043950e000 rw-p 00000000 00:00 0 
+2b043950e000-2b043951f000 r-xp 00000000 00:2a 3993328014                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda.so.0.0.0
+2b043951f000-2b043971e000 ---p 00011000 00:2a 3993328014                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda.so.0.0.0
+2b043971e000-2b043971f000 r--p 00010000 00:2a 3993328014                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda.so.0.0.0
+2b043971f000-2b0439720000 rw-p 00011000 00:2a 3993328014                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda.so.0.0.0
+2b0439720000-2b0439726000 r-xp 00000000 00:2a 3993328019                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda_gdrcopy.so.0.0.0
+2b0439726000-2b0439925000 ---p 00006000 00:2a 3993328019                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda_gdrcopy.so.0.0.0
+2b0439925000-2b0439926000 r--p 00005000 00:2a 3993328019                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda_gdrcopy.so.0.0.0
+2b0439926000-2b0439927000 rw-p 00006000 00:2a 3993328019                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cuda_gdrcopy.so.0.0.0
+2b0439927000-2b043992b000 r-xp 00000000 00:2a 3996353807                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/gdrcopy-2.2-tunfpptzjga6eejnbrrifrpqakxphvox/lib/libgdrapi.so.2.2
+2b043992b000-2b0439b2a000 ---p 00004000 00:2a 3996353807                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/gdrcopy-2.2-tunfpptzjga6eejnbrrifrpqakxphvox/lib/libgdrapi.so.2.2
+2b0439b2a000-2b0439b2b000 r--p 00003000 00:2a 3996353807                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/gdrcopy-2.2-tunfpptzjga6eejnbrrifrpqakxphvox/lib/libgdrapi.so.2.2
+2b0439b2b000-2b0439b2c000 rw-p 00004000 00:2a 3996353807                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/gdrcopy-2.2-tunfpptzjga6eejnbrrifrpqakxphvox/lib/libgdrapi.so.2.2
+2b0439b2c000-2b0439bd0000 r-xp 00000000 00:2a 3993195078                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0.0.0
+2b0439bd0000-2b0439dd0000 ---p 000a4000 00:2a 3993195078                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0.0.0
+2b0439dd0000-2b0439dd1000 r--p 000a4000 00:2a 3993195078                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0.0.0
+2b0439dd1000-2b0439dd7000 rw-p 000a5000 00:2a 3993195078                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0.0.0
+2b0439dd7000-2b0439e20000 r-xp 00000000 00:2a 3993467988                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx5.so.1.16.32.0
+2b0439e20000-2b043a020000 ---p 00049000 00:2a 3993467988                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx5.so.1.16.32.0
+2b043a020000-2b043a021000 r--p 00049000 00:2a 3993467988                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx5.so.1.16.32.0
+2b043a021000-2b043a022000 rw-p 0004a000 00:2a 3993467988                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx5.so.1.16.32.0
+2b043a022000-2b043a024000 rw-p 00000000 00:00 0 
+2b043a024000-2b043a036000 r-xp 00000000 00:2a 3993195088                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_rdmacm.so.0.0.0
+2b043a036000-2b043a235000 ---p 00012000 00:2a 3993195088                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_rdmacm.so.0.0.0
+2b043a235000-2b043a236000 r--p 00011000 00:2a 3993195088                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_rdmacm.so.0.0.0
+2b043a236000-2b043a237000 rw-p 00012000 00:2a 3993195088                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_rdmacm.so.0.0.0
+2b043a237000-2b043a23b000 r-xp 00000000 00:2a 3993504595                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cma.so.0.0.0
+2b043a23b000-2b043a43a000 ---p 00004000 00:2a 3993504595                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cma.so.0.0.0
+2b043a43a000-2b043a43b000 r--p 00003000 00:2a 3993504595                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cma.so.0.0.0
+2b043a43b000-2b043a43c000 rw-p 00004000 00:2a 3993504595                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_cma.so.0.0.0
+2b043a43c000-2b043a444000 r-xp 00000000 00:2a 3993195083                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib_cm.so.0.0.0
+2b043a444000-2b043a643000 ---p 00008000 00:2a 3993195083                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib_cm.so.0.0.0
+2b043a643000-2b043a644000 r--p 00007000 00:2a 3993195083                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib_cm.so.0.0.0
+2b043a644000-2b043a645000 rw-p 00008000 00:2a 3993195083                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib_cm.so.0.0.0
+2b043a645000-2b043a649000 r-xp 00000000 00:02 40819                      /usr/lib64/libibcm.so.1.0.0
+2b043a649000-2b043a848000 ---p 00004000 00:02 40819                      /usr/lib64/libibcm.so.1.0.0
+2b043a848000-2b043a849000 r--p 00003000 00:02 40819                      /usr/lib64/libibcm.so.1.0.0
+2b043a849000-2b043a84a000 rw-p 00004000 00:02 40819                      /usr/lib64/libibcm.so.1.0.0
+2b043a84a000-2b043a84e000 r-xp 00000000 00:2a 3996530742                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libsiw-rdmav25.so
+2b043a84e000-2b043aa4d000 ---p 00004000 00:2a 3996530742                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libsiw-rdmav25.so
+2b043aa4d000-2b043aa4e000 r--p 00003000 00:2a 3996530742                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libsiw-rdmav25.so
+2b043aa4e000-2b043aa4f000 rw-p 00004000 00:2a 3996530742                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libsiw-rdmav25.so
+2b043aa4f000-2b043aa53000 r-xp 00000000 00:2a 3996480551                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/librxe-rdmav25.so
+2b043aa53000-2b043ac53000 ---p 00004000 00:2a 3996480551                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/librxe-rdmav25.so
+2b043ac53000-2b043ac54000 r--p 00004000 00:2a 3996480551                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/librxe-rdmav25.so
+2b043ac54000-2b043ac55000 rw-p 00005000 00:2a 3996480551                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/librxe-rdmav25.so
+2b043ac55000-2b043ac59000 r-xp 00000000 00:2a 3996480550                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libipathverbs-rdmav25.so
+2b043ac59000-2b043ae58000 ---p 00004000 00:2a 3996480550                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libipathverbs-rdmav25.so
+2b043ae58000-2b043ae59000 r--p 00003000 00:2a 3996480550                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libipathverbs-rdmav25.so
+2b043ae59000-2b043ae5a000 rw-p 00004000 00:2a 3996480550                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libipathverbs-rdmav25.so
+2b043ae5a000-2b043ae5e000 r-xp 00000000 00:2a 3996480549                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhfi1verbs-rdmav25.so
+2b043ae5e000-2b043b05d000 ---p 00004000 00:2a 3996480549                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhfi1verbs-rdmav25.so
+2b043b05d000-2b043b05e000 r--p 00003000 00:2a 3996480549                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhfi1verbs-rdmav25.so
+2b043b05e000-2b043b05f000 rw-p 00004000 00:2a 3996480549                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhfi1verbs-rdmav25.so
+2b043b05f000-2b043b064000 r-xp 00000000 00:2a 3996480548                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libvmw_pvrdma-rdmav25.so
+2b043b064000-2b043b264000 ---p 00005000 00:2a 3996480548                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libvmw_pvrdma-rdmav25.so
+2b043b264000-2b043b265000 r--p 00005000 00:2a 3996480548                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libvmw_pvrdma-rdmav25.so
+2b043b265000-2b043b266000 rw-p 00006000 00:2a 3996480548                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libvmw_pvrdma-rdmav25.so
+2b043b266000-2b043b270000 r-xp 00000000 00:2a 3996480547                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libqedr-rdmav25.so
+2b043b270000-2b043b46f000 ---p 0000a000 00:2a 3996480547                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libqedr-rdmav25.so
+2b043b46f000-2b043b470000 r--p 00009000 00:2a 3996480547                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libqedr-rdmav25.so
+2b043b470000-2b043b471000 rw-p 0000a000 00:2a 3996480547                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libqedr-rdmav25.so
+2b043b471000-2b043b477000 r-xp 00000000 00:2a 3996480546                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libocrdma-rdmav25.so
+2b043b477000-2b043b677000 ---p 00006000 00:2a 3996480546                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libocrdma-rdmav25.so
+2b043b677000-2b043b678000 r--p 00006000 00:2a 3996480546                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libocrdma-rdmav25.so
+2b043b678000-2b043b679000 rw-p 00007000 00:2a 3996480546                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libocrdma-rdmav25.so
+2b043b679000-2b043b681000 r-xp 00000000 00:2a 3996480545                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libmthca-rdmav25.so
+2b043b681000-2b043b881000 ---p 00008000 00:2a 3996480545                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libmthca-rdmav25.so
+2b043b881000-2b043b882000 r--p 00008000 00:2a 3996480545                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libmthca-rdmav25.so
+2b043b882000-2b043b883000 rw-p 00009000 00:2a 3996480545                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libmthca-rdmav25.so
+2b043b883000-2b043b88e000 r-xp 00000000 00:2a 3993467985                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx4.so.1.0.32.0
+2b043b88e000-2b043ba8e000 ---p 0000b000 00:2a 3993467985                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx4.so.1.0.32.0
+2b043ba8e000-2b043ba8f000 r--p 0000b000 00:2a 3993467985                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx4.so.1.0.32.0
+2b043ba8f000-2b043ba90000 rw-p 0000c000 00:2a 3993467985                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libmlx4.so.1.0.32.0
+2b043ba90000-2b043ba97000 r-xp 00000000 00:2a 3996480542                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libi40iw-rdmav25.so
+2b043ba97000-2b043bc96000 ---p 00007000 00:2a 3996480542                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libi40iw-rdmav25.so
+2b043bc96000-2b043bc97000 r--p 00006000 00:2a 3996480542                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libi40iw-rdmav25.so
+2b043bc97000-2b043bc98000 rw-p 00007000 00:2a 3996480542                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libi40iw-rdmav25.so
+2b043bc98000-2b043bca1000 r-xp 00000000 00:2a 3996480541                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhns-rdmav25.so
+2b043bca1000-2b043bea1000 ---p 00009000 00:2a 3996480541                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhns-rdmav25.so
+2b043bea1000-2b043bea2000 r--p 00009000 00:2a 3996480541                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhns-rdmav25.so
+2b043bea2000-2b043bea3000 rw-p 0000a000 00:2a 3996480541                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libhns-rdmav25.so
+2b043bea3000-2b043beaa000 r-xp 00000000 00:2a 3993467982                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libefa.so.1.1.32.0
+2b043beaa000-2b043c0a9000 ---p 00007000 00:2a 3993467982                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libefa.so.1.1.32.0
+2b043c0a9000-2b043c0aa000 r--p 00006000 00:2a 3993467982                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libefa.so.1.1.32.0
+2b043c0aa000-2b043c0ab000 rw-p 00007000 00:2a 3993467982                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libefa.so.1.1.32.0
+2b043c0ab000-2b043c0b4000 r-xp 00000000 00:2a 3996480539                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libcxgb4-rdmav25.so
+2b043c0b4000-2b043c2b4000 ---p 00009000 00:2a 3996480539                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libcxgb4-rdmav25.so
+2b043c2b4000-2b043c2b5000 r--p 00009000 00:2a 3996480539                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libcxgb4-rdmav25.so
+2b043c2b5000-2b043c2b6000 rw-p 0000a000 00:2a 3996480539                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libcxgb4-rdmav25.so
+2b043c2b6000-2b043c2bc000 r-xp 00000000 00:2a 3996480538                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libbnxt_re-rdmav25.so
+2b043c2bc000-2b043c4bb000 ---p 00006000 00:2a 3996480538                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libbnxt_re-rdmav25.so
+2b043c4bb000-2b043c4bc000 r--p 00005000 00:2a 3996480538                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libbnxt_re-rdmav25.so
+2b043c4bc000-2b043c4bd000 rw-p 00006000 00:2a 3996480538                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/rdma-core-32.0-rav6dfxcyirm3yajdjbm2lhqmr24n46y/lib64/libibverbs/libbnxt_re-rdmav25.so
+2b043c4bd000-2b043c4be000 ---p 00000000 00:00 0 
+2b043c4be000-2b043c6be000 rw-p 00000000 00:00 0 
+2b043c6be000-2b043c6c5000 r-xp 00000000 00:2a 3993328010                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libucm_cuda.so.0.0.0
+2b043c6c5000-2b043c8c4000 ---p 00007000 00:2a 3993328010                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libucm_cuda.so.0.0.0
+2b043c8c4000-2b043c8c5000 r--p 00006000 00:2a 3993328010                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libucm_cuda.so.0.0.0
+2b043c8c5000-2b043c8c6000 rw-p 00007000 00:2a 3993328010                 /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libucm_cuda.so.0.0.0
+2b043c8c6000-2b043ccdf000 rw-s 00000000 00:10 30248794                   /dev/shm/ucx_shm_posix_6175692b (deleted)
+2b043ccdf000-2b043d0f8000 rw-s 00000000 00:01 53706759                   /SYSV00000000 (deleted)
+2b043d0f8000-2b043d17d000 rw-p 00000000 00:00 0 
+2b043d17d000-2b043d204000 rw-p 00000000 00:00 0 
+2b043d204000-2b043fa4b000 rw-p 00000000 00:00 0 
+2b0440000000-2b0440021000 rw-p 00000000 00:00 0 
+2b0440021000-2b0444000000 ---p 00000000 00:00 0 
+2b0444000000-2b0445227000 rw-p 00000000 00:00 0 
+2b0445227000-2b0445a28000 rw-p 00000000 00:00 0 
+2b0445a28000-2b0446249000 rw-p 00000000 00:00 0 
+2b0448000000-2b0448021000 rw-p 00000000 00:00 0 
+2b0448021000-2b044c000000 ---p 00000000 00:00 0 
+7ffd9714e000-7ffd97173000 rw-p 00000000 00:00 0                          [stack]
+7ffd971c1000-7ffd971c3000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+[eu-ms-006-37:16763] *** Process received signal ***
+[eu-ms-006-37:16763] Signal: Aborted (6)
+[eu-ms-006-37:16763] Signal code:  (-6)
+[eu-ms-006-37:16763] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2b0429a1a630]
+[eu-ms-006-37:16763] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2b0429c5d387]
+[eu-ms-006-37:16763] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2b0429c5ea78]
+[eu-ms-006-37:16763] [ 3] /usr/lib64/libc.so.6(+0x78f67)[0x2b0429c9ff67]
+[eu-ms-006-37:16763] [ 4] /usr/lib64/libc.so.6(+0x81329)[0x2b0429ca8329]
+[eu-ms-006-37:16763] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x26577)[0x2b042b8b4577]
+[eu-ms-006-37:16763] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_debug_disable_signal+0x39)[0x2b042b8b6dc9]
+[eu-ms-006-37:16763] [ 7] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_debug_cleanup+0x5c)[0x2b042b8b6e5c]
+[eu-ms-006-37:16763] [ 8] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x29405)[0x2b042b8b7405]
+[eu-ms-006-37:16763] [ 9] /usr/lib64/libpthread.so.0(+0xf630)[0x2b0429a1a630]
+[eu-ms-006-37:16763] [10] code/build_output/main[0x41d055]
+[eu-ms-006-37:16763] [11] code/build_output/main[0x41e661]
+[eu-ms-006-37:16763] [12] code/build_output/main[0x41a198]
+[eu-ms-006-37:16763] [13] code/build_output/main[0x40c3d9]
+[eu-ms-006-37:16763] [14] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b0429c49555]
+[eu-ms-006-37:16763] [15] code/build_output/main[0x40db3f]
+[eu-ms-006-37:16763] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 23038 on node eu-ms-025-39 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

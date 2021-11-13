@@ -1,0 +1,27 @@
+1: Starting numprocs=4 N=256, M=256 impl=rabenseifner-scatter
+3: Starting numprocs=4 N=256, M=256 impl=rabenseifner-scatter
+2: Starting numprocs=4 N=256, M=256 impl=rabenseifner-scatter
+0: Starting numprocs=4 N=256, M=256 impl=rabenseifner-scatter
+Iteration 0
+[eu-ms-010-22:12491:0:12491] Caught signal 11 (Segmentation fault: address not mapped to object at address (nil))
+==== backtrace (tid:  12491) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2aef506d3214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2aef506d33d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2aef506d36e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2aef4e836630]
+ 4  code/build_output/main() [0x41e2fb]
+ 5  code/build_output/main() [0x41a198]
+ 6  code/build_output/main() [0x40c3d9]
+ 7  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2aef4ea65555]
+ 8  code/build_output/main() [0x40db3f]
+=================================
+[eu-ms-010-20:20374:0:20374] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x1cbe000)
+[eu-ms-010-37:1793 :0:1793] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x10ec000)
+[eu-ms-010-45:11326:0:11326] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x1fcc000)
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 12491 on node eu-ms-010-22 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

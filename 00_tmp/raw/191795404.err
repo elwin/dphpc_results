@@ -1,0 +1,24 @@
+0: Starting numprocs=2 N=128, M=128 impl=rabenseifner-scatter
+Iteration 0
+1: Starting numprocs=2 N=128, M=128 impl=rabenseifner-scatter
+[eu-ms-020-19:22711:0:22711] Caught signal 11 (Segmentation fault: address not mapped to object at address 0xbb1000)
+==== backtrace (tid:  22711) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b193fc9e214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2b193fc9e3d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2b193fc9e6e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2b193de01630]
+ 4  code/build_output/main() [0x41d055]
+ 5  code/build_output/main() [0x41e661]
+ 6  code/build_output/main() [0x41a198]
+ 7  code/build_output/main() [0x40c3d9]
+ 8  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b193e030555]
+ 9  code/build_output/main() [0x40db3f]
+=================================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+*** Error in `code/build_output/main': free(): corrupted unsorted chunks: 0x00000000013b2430 ***
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 22711 on node eu-ms-020-19 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

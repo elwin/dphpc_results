@@ -1,0 +1,38 @@
+1: Starting numprocs=4 N=8192, M=8192 impl=rabenseifner-scatter
+3: Starting numprocs=4 N=8192, M=8192 impl=rabenseifner-scatter
+2: Starting numprocs=4 N=8192, M=8192 impl=rabenseifner-scatter
+0: Starting numprocs=4 N=8192, M=8192 impl=rabenseifner-scatter
+Iteration 0
+[eu-ms-011-23:17397:0:17397] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x7ffd160a4000)
+[eu-ms-011-28:4642 :0:4642] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x7fff227ec000)
+==== backtrace (tid:  17397) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b9c02a56214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2b9c02a563d7]
+==== backtrace (tid:   4642) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b194d8f7214]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2b9c02a566e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2b9c00bb9630]
+ 4  code/build_output/main() [0x41d248]
+ 5  code/build_output/main() [0x41dea5]
+ 6  code/build_output/main() [0x41a198]
+ 7  code/build_output/main() [0x40c3d9]
+ 8  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b9c00de8555]
+ 9  code/build_output/main() [0x40db3f]
+=================================
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x293d7) [0x2b194d8f73d7]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x296e4) [0x2b194d8f76e4]
+ 3  /usr/lib64/libpthread.so.0(+0xf630) [0x2b194ba5a630]
+ 4  code/build_output/main() [0x41d248]
+ 5  code/build_output/main() [0x41dea5]
+ 6  code/build_output/main() [0x41a198]
+ 7  code/build_output/main() [0x40c3d9]
+ 8  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b194bc89555]
+ 9  code/build_output/main() [0x40db3f]
+=================================
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 3 with PID 17397 on node eu-ms-011-23 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
