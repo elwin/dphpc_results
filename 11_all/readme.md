@@ -14,8 +14,6 @@
 ![](plots/compute_ratio_2.svg)
 ![](plots/compute_ratio_8.svg)
 ![](plots/compute_ratio_32.svg)
-![](plots/compute_ratio_dim_16.svg)
-![](plots/compute_ratio_dim_2048.svg)
 ![](plots/compute_ratio_dim_8192.svg)
 
 ## Memory Usage
