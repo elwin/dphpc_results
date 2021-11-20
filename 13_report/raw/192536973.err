@@ -1,0 +1,111 @@
+13: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+16: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+12: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+1: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+6: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+11: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+8: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+17: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+2: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+21: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+10: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+0: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+Iteration 0
+5: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+7: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+18: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+4: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+20: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+19: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+14: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+15: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+3: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+9: Starting numprocs=22 N=8192, M=8192 impl=allreduce-native-recursive_doubling
+time: 16.955441s
+Iteration 1
+time: 5.207690s
+Iteration 2
+time: 40.387368s
+Iteration 3
+time: 4.169322s
+Iteration 4
+time: 4.704957s
+Iteration 5
+time: 68.109159s
+Iteration 6
+time: 8.698981s
+Iteration 7
+time: 12.925922s
+Iteration 8
+time: 10.065676s
+Iteration 9
+time: 7.165369s
+Iteration 10
+time: 71.958556s
+Iteration 11
+time: 9.174165s
+Iteration 12
+time: 13.724754s
+Iteration 13
+time: 8.136404s
+Iteration 14
+time: 13.655791s
+Iteration 15
+time: 7.209259s
+Iteration 16
+time: 13.190632s
+Iteration 17
+time: 6.873158s
+Iteration 18
+time: 5.012839s
+Iteration 19
+[eu-ms-010-18:1108 :0:1108] rc_verbs_iface.c:92   send completion with error: transport retry counter exceeded qpn 0x1fa26 wrid 0x64 vendor_err 0x81
+==== backtrace (tid:   1108) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b09cf4cf214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x50) [0x2b09cf4cbf50]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369) [0x2b09cf4d0369]
+ 3  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1) [0x2b09cf4d0491]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af) [0x2b09dd7433af]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5) [0x2b09dd7439a5]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2b09cefc86ca]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_send+0x106) [0x2b09cca4b166]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_sendrecv_actual+0x8c) [0x2b09cc9649cc]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_allreduce_intra_recursivedoubling+0x293) [0x2b09cc965193]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_tuned_allreduce_intra_dec_dynamic+0xb4) [0x2b09cc9768c4]
+11  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(PMPI_Allreduce+0x168) [0x2b09cc916e98]
+12  code/build_output/main() [0x41a8c5]
+13  code/build_output/main() [0x41a2d8]
+14  code/build_output/main() [0x40c440]
+15  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b09cd861555]
+16  code/build_output/main() [0x40dc6f]
+=================================
+[eu-ms-010-18:01108] *** Process received signal ***
+[eu-ms-010-18:01108] Signal: Aborted (6)
+[eu-ms-010-18:01108] Signal code:  (-6)
+[eu-ms-010-18:01108] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2b09cd632630]
+[eu-ms-010-18:01108] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2b09cd875387]
+[eu-ms-010-18:01108] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2b09cd876a78]
+[eu-ms-010-18:01108] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x55)[0x2b09cf4cbf55]
+[eu-ms-010-18:01108] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369)[0x2b09cf4d0369]
+[eu-ms-010-18:01108] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1)[0x2b09cf4d0491]
+[eu-ms-010-18:01108] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af)[0x2b09dd7433af]
+[eu-ms-010-18:01108] [ 7] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5)[0x2b09dd7439a5]
+[eu-ms-010-18:01108] [ 8] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a)[0x2b09cefc86ca]
+[eu-ms-010-18:01108] [ 9] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_send+0x106)[0x2b09cca4b166]
+[eu-ms-010-18:01108] [10] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_sendrecv_actual+0x8c)[0x2b09cc9649cc]
+[eu-ms-010-18:01108] [11] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_allreduce_intra_recursivedoubling+0x293)[0x2b09cc965193]
+[eu-ms-010-18:01108] [12] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_tuned_allreduce_intra_dec_dynamic+0xb4)[0x2b09cc9768c4]
+[eu-ms-010-18:01108] [13] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(PMPI_Allreduce+0x168)[0x2b09cc916e98]
+[eu-ms-010-18:01108] [14] code/build_output/main[0x41a8c5]
+[eu-ms-010-18:01108] [15] code/build_output/main[0x41a2d8]
+[eu-ms-010-18:01108] [16] code/build_output/main[0x40c440]
+[eu-ms-010-18:01108] [17] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b09cd861555]
+[eu-ms-010-18:01108] [18] code/build_output/main[0x40dc6f]
+[eu-ms-010-18:01108] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 13 with PID 1108 on node eu-ms-010-18 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
