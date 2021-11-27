@@ -1,0 +1,57 @@
+6: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+4: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+5: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+0: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+Iteration 0
+1: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+7: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+3: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+2: Starting numprocs=8 N=8000, M=8000 impl=g-rabenseifner-allgather
+[eu-ms-012-07:21159:0:21159] rc_verbs_iface.c:92   send completion with error: transport retry counter exceeded qpn 0x173c wrid 0x37 vendor_err 0x81
+==== backtrace (tid:  21159) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2ab74173c214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x50) [0x2ab741738f50]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369) [0x2ab74173d369]
+ 3  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1) [0x2ab74173d491]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af) [0x2ab7478533af]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5) [0x2ab7478539a5]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2ab7412356ca]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_send+0x106) [0x2ab73ecb8166]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_sendrecv_actual+0x8c) [0x2ab73ebd19cc]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_allgather_intra_neighborexchange+0x1a9) [0x2ab73ebd0689]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(MPI_Allgather+0x11e) [0x2ab73eb82f7e]
+11  code/build_output/main() [0x41d3cb]
+12  code/build_output/main() [0x419d68]
+13  code/build_output/main() [0x40c314]
+14  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2ab73face555]
+15  code/build_output/main() [0x40df4c]
+=================================
+[eu-ms-012-07:21159] *** Process received signal ***
+[eu-ms-012-07:21159] Signal: Aborted (6)
+[eu-ms-012-07:21159] Signal code:  (-6)
+[eu-ms-012-07:21159] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2ab73f89f630]
+[eu-ms-012-07:21159] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2ab73fae2387]
+[eu-ms-012-07:21159] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2ab73fae3a78]
+[eu-ms-012-07:21159] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x55)[0x2ab741738f55]
+[eu-ms-012-07:21159] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369)[0x2ab74173d369]
+[eu-ms-012-07:21159] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1)[0x2ab74173d491]
+[eu-ms-012-07:21159] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af)[0x2ab7478533af]
+[eu-ms-012-07:21159] [ 7] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5)[0x2ab7478539a5]
+[eu-ms-012-07:21159] [ 8] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a)[0x2ab7412356ca]
+[eu-ms-012-07:21159] [ 9] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_send+0x106)[0x2ab73ecb8166]
+[eu-ms-012-07:21159] [10] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_sendrecv_actual+0x8c)[0x2ab73ebd19cc]
+[eu-ms-012-07:21159] [11] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_allgather_intra_neighborexchange+0x1a9)[0x2ab73ebd0689]
+[eu-ms-012-07:21159] [12] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(MPI_Allgather+0x11e)[0x2ab73eb82f7e]
+[eu-ms-012-07:21159] [13] code/build_output/main[0x41d3cb]
+[eu-ms-012-07:21159] [14] code/build_output/main[0x419d68]
+[eu-ms-012-07:21159] [15] code/build_output/main[0x40c314]
+[eu-ms-012-07:21159] [16] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2ab73face555]
+[eu-ms-012-07:21159] [17] code/build_output/main[0x40df4c]
+[eu-ms-012-07:21159] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 1 with PID 21159 on node eu-ms-012-07 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
