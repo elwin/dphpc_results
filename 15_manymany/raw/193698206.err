@@ -1,0 +1,69 @@
+15: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+14: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+7: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+0: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+Iteration 0
+2: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+1: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+12: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+10: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+8: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+13: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+6: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+11: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+3: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+4: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+9: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+5: Starting numprocs=16 N=3000, M=3000 impl=allreduce-native-recursive_doubling
+time: 101.886930s
+Iteration 1
+[eu-ms-006-36:23312:0:23312] rc_verbs_iface.c:92   send completion with error: transport retry counter exceeded qpn 0x148e2 wrid 0xa vendor_err 0x81
+==== backtrace (tid:  23312) ====
+ 0  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_handle_error+0x254) [0x2b31957f4214]
+ 1  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x50) [0x2b31957f0f50]
+ 2  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369) [0x2b31957f5369]
+ 3  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1) [0x2b31957f5491]
+ 4  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af) [0x2b319b90b3af]
+ 5  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5) [0x2b319b90b9a5]
+ 6  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a) [0x2b31952ed6ca]
+ 7  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_send+0x106) [0x2b3192d70166]
+ 8  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_sendrecv_actual+0x8c) [0x2b3192c899cc]
+ 9  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_allreduce_intra_recursivedoubling+0x293) [0x2b3192c8a193]
+10  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_tuned_allreduce_intra_dec_dynamic+0xb4) [0x2b3192c9b8c4]
+11  /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(PMPI_Allreduce+0x168) [0x2b3192c3be98]
+12  code/build_output/main() [0x41a554]
+13  code/build_output/main() [0x419d68]
+14  code/build_output/main() [0x40c314]
+15  /usr/lib64/libc.so.6(__libc_start_main+0xf5) [0x2b3193b86555]
+16  code/build_output/main() [0x40df4c]
+=================================
+[eu-ms-006-36:23312] *** Process received signal ***
+[eu-ms-006-36:23312] Signal: Aborted (6)
+[eu-ms-006-36:23312] Signal code:  (-6)
+[eu-ms-006-36:23312] [ 0] /usr/lib64/libpthread.so.0(+0xf630)[0x2b3193957630]
+[eu-ms-006-36:23312] [ 1] /usr/lib64/libc.so.6(gsignal+0x37)[0x2b3193b9a387]
+[eu-ms-006-36:23312] [ 2] /usr/lib64/libc.so.6(abort+0x148)[0x2b3193b9ba78]
+[eu-ms-006-36:23312] [ 3] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_fatal_error_message+0x55)[0x2b31957f0f55]
+[eu-ms-006-36:23312] [ 4] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(+0x2a369)[0x2b31957f5369]
+[eu-ms-006-36:23312] [ 5] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucs.so.0(ucs_log_dispatch+0xd1)[0x2b31957f5491]
+[eu-ms-006-36:23312] [ 6] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x303af)[0x2b319b90b3af]
+[eu-ms-006-36:23312] [ 7] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/ucx/libuct_ib.so.0(+0x309a5)[0x2b319b90b9a5]
+[eu-ms-006-36:23312] [ 8] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/ucx-1.10.1-rtkf46xfr456yc5n3dtbc6um62ellewy/lib/libucp.so.0(ucp_worker_progress+0x6a)[0x2b31952ed6ca]
+[eu-ms-006-36:23312] [ 9] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(mca_pml_ucx_send+0x106)[0x2b3192d70166]
+[eu-ms-006-36:23312] [10] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_sendrecv_actual+0x8c)[0x2b3192c899cc]
+[eu-ms-006-36:23312] [11] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_base_allreduce_intra_recursivedoubling+0x293)[0x2b3192c8a193]
+[eu-ms-006-36:23312] [12] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(ompi_coll_tuned_allreduce_intra_dec_dynamic+0xb4)[0x2b3192c9b8c4]
+[eu-ms-006-36:23312] [13] /cluster/spack/apps/linux-centos7-x86_64/gcc-9.3.0/openmpi-4.0.2-v3wmvdtsldm6pa4b7vp6y5ivy53izisg/lib/libmpi.so.40(PMPI_Allreduce+0x168)[0x2b3192c3be98]
+[eu-ms-006-36:23312] [14] code/build_output/main[0x41a554]
+[eu-ms-006-36:23312] [15] code/build_output/main[0x419d68]
+[eu-ms-006-36:23312] [16] code/build_output/main[0x40c314]
+[eu-ms-006-36:23312] [17] /usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b3193b86555]
+[eu-ms-006-36:23312] [18] code/build_output/main[0x40df4c]
+[eu-ms-006-36:23312] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 7 with PID 23312 on node eu-ms-006-36 exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

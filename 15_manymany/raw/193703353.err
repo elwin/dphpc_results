@@ -1,0 +1,33 @@
+[eu-ms-003-17:18227] [[12091,0],0] ORTE_ERROR_LOG: The specified application failed to start in file plm_lsf_module.c at line 347
+--------------------------------------------------------------------------
+The LSF process starter (lsb_launch) failed to start the daemons on
+the nodes in the allocation.
+ Returned : -1
+ lsberrno : (238) Bad host name
+
+This may mean that one or more of the nodes in the LSF allocation is
+not setup properly. Below is a list of the 15 nodes that were passed
+to lsb_launch:
+eu-ms-003-14
+eu-ms-003-11
+eu-ms-003-29
+eu-ms-003-19
+eu-ms-003-35
+eu-ms-003-36
+eu-ms-003-07
+eu-ms-003-22
+eu-ms-003-38
+eu-ms-003-04
+eu-ms-003-25
+eu-ms-003-28
+eu-ms-003-43
+eu-ms-003-37
+eu-ms-003-24
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+An internal error has occurred in ORTE:
+
+[[12091,0],0] FORCE-TERMINATE AT (null):1 - error plm_lsf_module.c(380)
+
+This is something that should be reported to the developers.
+--------------------------------------------------------------------------
